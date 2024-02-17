@@ -30,16 +30,17 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            btnConsultar = new Button();
             textBox1 = new TextBox();
+            btnConsultar = new Button();
+            label2 = new Label();
             groupBox2 = new GroupBox();
-            label3 = new Label();
-            label4 = new Label();
+            dataGridView1 = new DataGridView();
+            textBox2 = new TextBox();
+            button2 = new Button();
             comboBox1 = new ComboBox();
             button1 = new Button();
-            button2 = new Button();
-            textBox2 = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
             button3 = new Button();
             button4 = new Button();
             groupBox3 = new GroupBox();
@@ -47,17 +48,16 @@
             textBox3 = new TextBox();
             label6 = new Label();
             dateTimePicker1 = new DateTimePicker();
-            dataGridView1 = new DataGridView();
             groupBox4 = new GroupBox();
+            button5 = new Button();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
             label7 = new Label();
             label8 = new Label();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            button5 = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,14 +83,12 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Elegir Cliente";
             // 
-            // label2
+            // textBox1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(23, 37);
-            label2.Name = "label2";
-            label2.Size = new Size(47, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Cliente:";
+            textBox1.Location = new Point(81, 34);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(270, 23);
+            textBox1.TabIndex = 2;
             // 
             // btnConsultar
             // 
@@ -100,13 +98,16 @@
             btnConsultar.TabIndex = 1;
             btnConsultar.Text = "Consultar";
             btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += btnConsultar_Click;
             // 
-            // textBox1
+            // label2
             // 
-            textBox1.Location = new Point(81, 34);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 23);
-            textBox1.TabIndex = 2;
+            label2.AutoSize = true;
+            label2.Location = new Point(23, 37);
+            label2.Name = "label2";
+            label2.Size = new Size(47, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Cliente:";
             // 
             // groupBox2
             // 
@@ -124,6 +125,49 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Detalle  de la Venta";
             groupBox2.Enter += groupBox2_Enter;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(33, 130);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(407, 117);
+            dataGridView1.TabIndex = 12;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(330, 36);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(121, 23);
+            textBox2.TabIndex = 11;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(365, 85);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 10;
+            button2.Text = "Quitar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Corte", "Tinturado", "Peinado", "Venta de Producto" });
+            comboBox1.Location = new Point(89, 31);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 6;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(33, 85);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 9;
+            button1.Text = "Agregar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label3
             // 
@@ -143,40 +187,6 @@
             label4.TabIndex = 6;
             label4.Text = "Precio:";
             label4.Click += label4_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Corte", "Tinturado", "Peinado", "Venta de Producto" });
-            comboBox1.Location = new Point(89, 31);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 6;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(31, 85);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 9;
-            button1.Text = "Agregar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(356, 85);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 10;
-            button2.Text = "Quitar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(330, 36);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(121, 23);
-            textBox2.TabIndex = 11;
             // 
             // button3
             // 
@@ -239,14 +249,6 @@
             dateTimePicker1.Size = new Size(200, 23);
             dateTimePicker1.TabIndex = 11;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 130);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(407, 117);
-            dataGridView1.TabIndex = 12;
-            // 
             // groupBox4
             // 
             groupBox4.Controls.Add(button5);
@@ -260,6 +262,30 @@
             groupBox4.TabIndex = 12;
             groupBox4.TabStop = false;
             groupBox4.Text = "Pago";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(36, 150);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 23);
+            button5.TabIndex = 13;
+            button5.Text = "Pagar";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(26, 98);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(100, 23);
+            textBox5.TabIndex = 16;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(25, 42);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(100, 23);
+            textBox4.TabIndex = 15;
+            textBox4.Text = "12%";
             // 
             // label7
             // 
@@ -279,30 +305,6 @@
             label8.Size = new Size(24, 15);
             label8.TabIndex = 14;
             label8.Text = "IVA";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(25, 42);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 15;
-            textBox4.Text = "12%";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(26, 98);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 16;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(36, 150);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 13;
-            button5.Text = "Pagar";
-            button5.UseVisualStyleBackColor = true;
             // 
             // Facturacion
             // 
@@ -326,8 +328,8 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox3.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             ResumeLayout(false);

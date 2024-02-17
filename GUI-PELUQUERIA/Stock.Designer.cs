@@ -33,8 +33,8 @@
             label5 = new Label();
             textBox1 = new TextBox();
             groupBox1 = new GroupBox();
-            dataGridView1 = new DataGridView();
             button1 = new Button();
+            dataGridView1 = new DataGridView();
             groupBox2 = new GroupBox();
             textBox2 = new TextBox();
             groupBox1.SuspendLayout();
@@ -91,14 +91,6 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Buscador";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(325, 189);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(461, 199);
-            dataGridView1.TabIndex = 9;
-            // 
             // button1
             // 
             button1.Location = new Point(367, 27);
@@ -107,11 +99,20 @@
             button1.TabIndex = 8;
             button1.Text = "buscar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(325, 189);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(461, 199);
+            dataGridView1.TabIndex = 9;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(textBox2);
-            groupBox2.Location = new Point(792, 135);
+            groupBox2.Location = new Point(826, 70);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(182, 79);
             groupBox2.TabIndex = 10;
@@ -120,9 +121,9 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(25, 37);
+            textBox2.Location = new Point(19, 31);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
+            textBox2.Size = new Size(146, 23);
             textBox2.TabIndex = 0;
             // 
             // Stock
@@ -130,7 +131,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(49, 66, 82);
-            ClientSize = new Size(996, 450);
+            ClientSize = new Size(1020, 450);
             Controls.Add(groupBox2);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);

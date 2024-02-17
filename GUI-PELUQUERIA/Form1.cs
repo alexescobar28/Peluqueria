@@ -5,6 +5,7 @@ namespace GUI_PELUQUERIA
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             AbrirFormHija(new Inicio());
         }
 
@@ -115,6 +116,11 @@ namespace GUI_PELUQUERIA
         private void btnInicio_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new Inicio());
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

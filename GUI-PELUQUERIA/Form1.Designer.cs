@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            BarraTitle = new Panel();
-            btnRestaurar = new PictureBox();
-            btnMax = new PictureBox();
-            btnMin = new PictureBox();
-            btnCerrar = new PictureBox();
             panelContenedor = new Panel();
+            button1 = new Button();
             BarraMenu = new Panel();
+            btnInicio = new Button();
             SubmenuVentas = new Panel();
             panel8 = new Panel();
             button7 = new Button();
@@ -51,79 +48,20 @@
             btnClientes = new Button();
             panel1 = new Panel();
             btnProductos = new Button();
-            button1 = new Button();
-            btnInicio = new Button();
-            BarraTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnMax).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnMin).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            btnCerrar = new PictureBox();
+            btnMin = new PictureBox();
+            btnMax = new PictureBox();
+            btnRestaurar = new PictureBox();
+            BarraTitle = new Panel();
             panelContenedor.SuspendLayout();
             BarraMenu.SuspendLayout();
             SubmenuVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnMax).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnRestaurar).BeginInit();
+            BarraTitle.SuspendLayout();
             SuspendLayout();
-            // 
-            // BarraTitle
-            // 
-            BarraTitle.BackColor = Color.FromArgb(0, 80, 200);
-            BarraTitle.Controls.Add(btnRestaurar);
-            BarraTitle.Controls.Add(btnMax);
-            BarraTitle.Controls.Add(btnMin);
-            BarraTitle.Controls.Add(btnCerrar);
-            BarraTitle.Dock = DockStyle.Top;
-            BarraTitle.Location = new Point(0, 0);
-            BarraTitle.Name = "BarraTitle";
-            BarraTitle.Size = new Size(1300, 50);
-            BarraTitle.TabIndex = 1;
-            // 
-            // btnRestaurar
-            // 
-            btnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRestaurar.Image = (Image)resources.GetObject("btnRestaurar.Image");
-            btnRestaurar.Location = new Point(1192, 3);
-            btnRestaurar.Name = "btnRestaurar";
-            btnRestaurar.Size = new Size(45, 34);
-            btnRestaurar.SizeMode = PictureBoxSizeMode.Zoom;
-            btnRestaurar.TabIndex = 3;
-            btnRestaurar.TabStop = false;
-            btnRestaurar.Visible = false;
-            btnRestaurar.Click += btnRestaurar_Click;
-            // 
-            // btnMax
-            // 
-            btnMax.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMax.Image = (Image)resources.GetObject("btnMax.Image");
-            btnMax.Location = new Point(1192, 3);
-            btnMax.Name = "btnMax";
-            btnMax.Size = new Size(45, 34);
-            btnMax.SizeMode = PictureBoxSizeMode.Zoom;
-            btnMax.TabIndex = 2;
-            btnMax.TabStop = false;
-            btnMax.Click += btnMax_Click;
-            // 
-            // btnMin
-            // 
-            btnMin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMin.Image = (Image)resources.GetObject("btnMin.Image");
-            btnMin.Location = new Point(1141, 3);
-            btnMin.Name = "btnMin";
-            btnMin.Size = new Size(45, 34);
-            btnMin.SizeMode = PictureBoxSizeMode.Zoom;
-            btnMin.TabIndex = 1;
-            btnMin.TabStop = false;
-            btnMin.Click += btnMin_Click;
-            // 
-            // btnCerrar
-            // 
-            btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(1243, 3);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(45, 34);
-            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
-            btnCerrar.TabIndex = 0;
-            btnCerrar.TabStop = false;
-            btnCerrar.Click += btnCerrar_Click;
             // 
             // panelContenedor
             // 
@@ -134,6 +72,16 @@
             panelContenedor.Name = "panelContenedor";
             panelContenedor.Size = new Size(1300, 600);
             panelContenedor.TabIndex = 2;
+            panelContenedor.Paint += panelContenedor_Paint;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(0, 0);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // BarraMenu
             // 
@@ -155,6 +103,23 @@
             BarraMenu.Name = "BarraMenu";
             BarraMenu.Size = new Size(200, 600);
             BarraMenu.TabIndex = 3;
+            // 
+            // btnInicio
+            // 
+            btnInicio.FlatAppearance.BorderSize = 0;
+            btnInicio.FlatStyle = FlatStyle.Flat;
+            btnInicio.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInicio.ForeColor = SystemColors.MenuHighlight;
+            btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
+            btnInicio.ImageAlign = ContentAlignment.TopCenter;
+            btnInicio.Location = new Point(3, 6);
+            btnInicio.Name = "btnInicio";
+            btnInicio.Size = new Size(197, 128);
+            btnInicio.TabIndex = 15;
+            btnInicio.Text = "INICIO";
+            btnInicio.TextAlign = ContentAlignment.BottomCenter;
+            btnInicio.UseVisualStyleBackColor = true;
+            btnInicio.Click += btnInicio_Click;
             // 
             // SubmenuVentas
             // 
@@ -322,31 +287,67 @@
             btnProductos.UseVisualStyleBackColor = true;
             btnProductos.Click += btnProductos_Click_1;
             // 
-            // button1
+            // btnCerrar
             // 
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
+            btnCerrar.Location = new Point(1243, 3);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(45, 34);
+            btnCerrar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnCerrar.TabIndex = 0;
+            btnCerrar.TabStop = false;
+            btnCerrar.Click += btnCerrar_Click;
             // 
-            // btnInicio
+            // btnMin
             // 
-            btnInicio.FlatAppearance.BorderSize = 0;
-            btnInicio.FlatStyle = FlatStyle.Flat;
-            btnInicio.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.ForeColor = SystemColors.MenuHighlight;
-            btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
-            btnInicio.ImageAlign = ContentAlignment.TopCenter;
-            btnInicio.Location = new Point(3, 6);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(197, 128);
-            btnInicio.TabIndex = 15;
-            btnInicio.Text = "INICIO";
-            btnInicio.TextAlign = ContentAlignment.BottomCenter;
-            btnInicio.UseVisualStyleBackColor = true;
-            btnInicio.Click += btnInicio_Click;
+            btnMin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMin.Image = (Image)resources.GetObject("btnMin.Image");
+            btnMin.Location = new Point(1141, 3);
+            btnMin.Name = "btnMin";
+            btnMin.Size = new Size(45, 34);
+            btnMin.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMin.TabIndex = 1;
+            btnMin.TabStop = false;
+            btnMin.Click += btnMin_Click;
+            // 
+            // btnMax
+            // 
+            btnMax.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnMax.Image = (Image)resources.GetObject("btnMax.Image");
+            btnMax.Location = new Point(1192, 3);
+            btnMax.Name = "btnMax";
+            btnMax.Size = new Size(45, 34);
+            btnMax.SizeMode = PictureBoxSizeMode.Zoom;
+            btnMax.TabIndex = 2;
+            btnMax.TabStop = false;
+            btnMax.Click += btnMax_Click;
+            // 
+            // btnRestaurar
+            // 
+            btnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRestaurar.Image = (Image)resources.GetObject("btnRestaurar.Image");
+            btnRestaurar.Location = new Point(1192, 3);
+            btnRestaurar.Name = "btnRestaurar";
+            btnRestaurar.Size = new Size(45, 34);
+            btnRestaurar.SizeMode = PictureBoxSizeMode.Zoom;
+            btnRestaurar.TabIndex = 3;
+            btnRestaurar.TabStop = false;
+            btnRestaurar.Visible = false;
+            btnRestaurar.Click += btnRestaurar_Click;
+            // 
+            // BarraTitle
+            // 
+            BarraTitle.BackColor = Color.FromArgb(0, 80, 200);
+            BarraTitle.Controls.Add(btnRestaurar);
+            BarraTitle.Controls.Add(btnMax);
+            BarraTitle.Controls.Add(btnMin);
+            BarraTitle.Controls.Add(btnCerrar);
+            BarraTitle.Dock = DockStyle.Top;
+            BarraTitle.Location = new Point(0, 0);
+            BarraTitle.Name = "BarraTitle";
+            BarraTitle.Size = new Size(1300, 50);
+            BarraTitle.TabIndex = 1;
             // 
             // Form1
             // 
@@ -359,23 +360,18 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
-            BarraTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)btnRestaurar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnMax).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnMin).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             panelContenedor.ResumeLayout(false);
             BarraMenu.ResumeLayout(false);
             SubmenuVentas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnMax).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnRestaurar).EndInit();
+            BarraTitle.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel BarraTitle;
-        private PictureBox btnMax;
-        private PictureBox btnMin;
-        private PictureBox btnCerrar;
-        private PictureBox btnRestaurar;
         private Panel panelContenedor;
         private Panel BarraMenu;
         private Panel SubmenuVentas;
@@ -395,5 +391,10 @@
         private Button btnProductos;
         private Button button1;
         private Button btnInicio;
+        private PictureBox btnCerrar;
+        private PictureBox btnMin;
+        private PictureBox btnMax;
+        private PictureBox btnRestaurar;
+        private Panel BarraTitle;
     }
 }

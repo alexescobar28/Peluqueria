@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_PELUQUERIA
 {
-    public partial class Stock : Form
+    public partial class StockAgregar : Form
     {
-        public Stock()
+        public StockAgregar()
         {
             InitializeComponent();
         }
