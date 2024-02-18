@@ -30,10 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             label1 = new Label();
-            button1 = new Button();
+            btnRegistrar = new Button();
             groupBox1 = new GroupBox();
-            button3 = new Button();
-            button2 = new Button();
+            btnActualizar = new Button();
+            btnConsultar = new Button();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -61,21 +61,21 @@
             label1.TabIndex = 0;
             label1.Text = "Productos";
             // 
-            // button1
+            // btnRegistrar
             // 
-            button1.Location = new Point(30, 35);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "Registrar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnRegistrar.Location = new Point(30, 35);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(75, 23);
+            btnRegistrar.TabIndex = 1;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += button1_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
+            groupBox1.Controls.Add(btnActualizar);
+            groupBox1.Controls.Add(btnConsultar);
+            groupBox1.Controls.Add(btnRegistrar);
             groupBox1.Location = new Point(488, 352);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(445, 81);
@@ -83,25 +83,25 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Opciones";
             // 
-            // button3
+            // btnActualizar
             // 
-            button3.Location = new Point(278, 35);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 3;
-            button3.Text = "Actualizar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnActualizar.Location = new Point(278, 35);
+            btnActualizar.Name = "btnActualizar";
+            btnActualizar.Size = new Size(75, 23);
+            btnActualizar.TabIndex = 3;
+            btnActualizar.Text = "Actualizar";
+            btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Click += button3_Click;
             // 
-            // button2
+            // btnConsultar
             // 
-            button2.Location = new Point(146, 35);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Consultar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnConsultar.Location = new Point(146, 35);
+            btnConsultar.Name = "btnConsultar";
+            btnConsultar.Size = new Size(75, 23);
+            btnConsultar.TabIndex = 2;
+            btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = true;
+            btnConsultar.Click += button2_Click;
             // 
             // label2
             // 
@@ -233,10 +233,10 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button btnRegistrar;
         private GroupBox groupBox1;
-        private Button button3;
-        private Button button2;
+        private Button btnActualizar;
+        private Button btnConsultar;
         private Label label2;
         private Label label3;
         private Label label4;

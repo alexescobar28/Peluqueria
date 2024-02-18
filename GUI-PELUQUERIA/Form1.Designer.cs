@@ -31,23 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panelContenedor = new Panel();
             button1 = new Button();
-            BarraMenu = new Panel();
             btnInicio = new Button();
-            SubmenuVentas = new Panel();
-            panel8 = new Panel();
-            button7 = new Button();
-            panel7 = new Panel();
-            btnFacturacion = new Button();
+            BarraMenu = new Panel();
+            panelSubVentas = new Panel();
             panel5 = new Panel();
-            btnVentas = new Button();
             panel4 = new Panel();
-            btnAdministración = new Button();
-            panel3 = new Panel();
+            button7 = new Button();
+            btnFacturacion = new Button();
+            btnVentas = new Button();
+            btnAdministracion = new Button();
             btnAgenda = new Button();
-            panel2 = new Panel();
             btnClientes = new Button();
-            panel1 = new Panel();
+            panelSubProductos = new Panel();
             btnProductos = new Button();
+            btnHerramientas = new Button();
+            panel2 = new Panel();
+            panel1 = new Panel();
+            btnProductosHerramientas = new Button();
+            panelLogo = new Panel();
             btnCerrar = new PictureBox();
             btnMin = new PictureBox();
             btnMax = new PictureBox();
@@ -55,7 +56,9 @@
             BarraTitle = new Panel();
             panelContenedor.SuspendLayout();
             BarraMenu.SuspendLayout();
-            SubmenuVentas.SuspendLayout();
+            panelSubVentas.SuspendLayout();
+            panelSubProductos.SuspendLayout();
+            panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnMax).BeginInit();
@@ -83,27 +86,6 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
-            // BarraMenu
-            // 
-            BarraMenu.BackColor = Color.FromArgb(26, 32, 40);
-            BarraMenu.Controls.Add(btnInicio);
-            BarraMenu.Controls.Add(SubmenuVentas);
-            BarraMenu.Controls.Add(panel5);
-            BarraMenu.Controls.Add(btnVentas);
-            BarraMenu.Controls.Add(panel4);
-            BarraMenu.Controls.Add(btnAdministración);
-            BarraMenu.Controls.Add(panel3);
-            BarraMenu.Controls.Add(btnAgenda);
-            BarraMenu.Controls.Add(panel2);
-            BarraMenu.Controls.Add(btnClientes);
-            BarraMenu.Controls.Add(panel1);
-            BarraMenu.Controls.Add(btnProductos);
-            BarraMenu.Dock = DockStyle.Left;
-            BarraMenu.Location = new Point(0, 50);
-            BarraMenu.Name = "BarraMenu";
-            BarraMenu.Size = new Size(200, 600);
-            BarraMenu.TabIndex = 3;
-            // 
             // btnInicio
             // 
             btnInicio.FlatAppearance.BorderSize = 0;
@@ -114,32 +96,58 @@
             btnInicio.ImageAlign = ContentAlignment.TopCenter;
             btnInicio.Location = new Point(3, 6);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(197, 128);
-            btnInicio.TabIndex = 15;
+            btnInicio.Size = new Size(197, 117);
+            btnInicio.TabIndex = 17;
             btnInicio.Text = "INICIO";
             btnInicio.TextAlign = ContentAlignment.BottomCenter;
             btnInicio.UseVisualStyleBackColor = true;
-            btnInicio.Click += btnInicio_Click;
+            btnInicio.Click += btnInicio_Click_1;
             // 
-            // SubmenuVentas
+            // BarraMenu
             // 
-            SubmenuVentas.Controls.Add(panel8);
-            SubmenuVentas.Controls.Add(button7);
-            SubmenuVentas.Controls.Add(panel7);
-            SubmenuVentas.Controls.Add(btnFacturacion);
-            SubmenuVentas.Location = new Point(32, 325);
-            SubmenuVentas.Name = "SubmenuVentas";
-            SubmenuVentas.Size = new Size(168, 71);
-            SubmenuVentas.TabIndex = 14;
-            SubmenuVentas.Visible = false;
+            BarraMenu.AutoScroll = true;
+            BarraMenu.BackColor = Color.FromArgb(26, 32, 40);
+            BarraMenu.Controls.Add(panelSubVentas);
+            BarraMenu.Controls.Add(btnVentas);
+            BarraMenu.Controls.Add(btnAdministracion);
+            BarraMenu.Controls.Add(btnAgenda);
+            BarraMenu.Controls.Add(btnClientes);
+            BarraMenu.Controls.Add(panelSubProductos);
+            BarraMenu.Controls.Add(btnProductosHerramientas);
+            BarraMenu.Controls.Add(panelLogo);
+            BarraMenu.Dock = DockStyle.Left;
+            BarraMenu.Location = new Point(0, 50);
+            BarraMenu.Name = "BarraMenu";
+            BarraMenu.Size = new Size(200, 600);
+            BarraMenu.TabIndex = 3;
             // 
-            // panel8
+            // panelSubVentas
             // 
-            panel8.BackColor = Color.FromArgb(0, 80, 200);
-            panel8.Location = new Point(0, 37);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(5, 28);
-            panel8.TabIndex = 18;
+            panelSubVentas.Controls.Add(panel5);
+            panelSubVentas.Controls.Add(panel4);
+            panelSubVentas.Controls.Add(button7);
+            panelSubVentas.Controls.Add(btnFacturacion);
+            panelSubVentas.Dock = DockStyle.Top;
+            panelSubVentas.Location = new Point(0, 366);
+            panelSubVentas.Name = "panelSubVentas";
+            panelSubVentas.Size = new Size(200, 77);
+            panelSubVentas.TabIndex = 22;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.FromArgb(0, 80, 200);
+            panel5.Location = new Point(35, 46);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(5, 32);
+            panel5.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(0, 80, 200);
+            panel4.Location = new Point(35, 8);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(5, 32);
+            panel4.TabIndex = 6;
             // 
             // button7
             // 
@@ -147,7 +155,7 @@
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             button7.FlatStyle = FlatStyle.Flat;
             button7.ForeColor = Color.White;
-            button7.Location = new Point(0, 37);
+            button7.Location = new Point(32, 8);
             button7.Name = "button7";
             button7.Size = new Size(168, 28);
             button7.TabIndex = 17;
@@ -155,21 +163,13 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click_1;
             // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(0, 80, 200);
-            panel7.Location = new Point(0, 3);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(5, 28);
-            panel7.TabIndex = 16;
-            // 
             // btnFacturacion
             // 
             btnFacturacion.FlatAppearance.BorderSize = 0;
             btnFacturacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnFacturacion.FlatStyle = FlatStyle.Flat;
             btnFacturacion.ForeColor = Color.White;
-            btnFacturacion.Location = new Point(0, 3);
+            btnFacturacion.Location = new Point(32, 42);
             btnFacturacion.Name = "btnFacturacion";
             btnFacturacion.Size = new Size(168, 28);
             btnFacturacion.TabIndex = 15;
@@ -177,101 +177,77 @@
             btnFacturacion.UseVisualStyleBackColor = true;
             btnFacturacion.Click += btnFacturacion_Click;
             // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(0, 80, 200);
-            panel5.Location = new Point(0, 281);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(5, 32);
-            panel5.TabIndex = 13;
-            // 
             // btnVentas
             // 
+            btnVentas.Dock = DockStyle.Top;
             btnVentas.FlatAppearance.BorderSize = 0;
             btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnVentas.FlatStyle = FlatStyle.Flat;
             btnVentas.ForeColor = Color.White;
-            btnVentas.Location = new Point(0, 281);
+            btnVentas.Location = new Point(0, 334);
             btnVentas.Name = "btnVentas";
-            btnVentas.Size = new Size(197, 32);
-            btnVentas.TabIndex = 12;
+            btnVentas.Size = new Size(200, 32);
+            btnVentas.TabIndex = 25;
             btnVentas.Text = "Ventas";
             btnVentas.UseVisualStyleBackColor = true;
-            btnVentas.Click += btnVentas_Click;
+            btnVentas.Click += btnVentas_Click_1;
             // 
-            // panel4
+            // btnAdministracion
             // 
-            panel4.BackColor = Color.FromArgb(0, 80, 200);
-            panel4.Location = new Point(0, 243);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(5, 32);
-            panel4.TabIndex = 11;
-            // 
-            // btnAdministración
-            // 
-            btnAdministración.FlatAppearance.BorderSize = 0;
-            btnAdministración.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btnAdministración.FlatStyle = FlatStyle.Flat;
-            btnAdministración.ForeColor = Color.White;
-            btnAdministración.Location = new Point(0, 243);
-            btnAdministración.Name = "btnAdministración";
-            btnAdministración.Size = new Size(197, 32);
-            btnAdministración.TabIndex = 10;
-            btnAdministración.Text = "Administración";
-            btnAdministración.UseVisualStyleBackColor = true;
-            btnAdministración.Click += btnAdministración_Click;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(0, 80, 200);
-            panel3.Location = new Point(0, 205);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(5, 32);
-            panel3.TabIndex = 9;
+            btnAdministracion.Dock = DockStyle.Top;
+            btnAdministracion.FlatAppearance.BorderSize = 0;
+            btnAdministracion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnAdministracion.FlatStyle = FlatStyle.Flat;
+            btnAdministracion.ForeColor = Color.White;
+            btnAdministracion.Location = new Point(0, 302);
+            btnAdministracion.Name = "btnAdministracion";
+            btnAdministracion.Size = new Size(200, 32);
+            btnAdministracion.TabIndex = 24;
+            btnAdministracion.Text = "Administración";
+            btnAdministracion.UseVisualStyleBackColor = true;
+            btnAdministracion.Click += btnAdministracion_Click;
             // 
             // btnAgenda
             // 
+            btnAgenda.Dock = DockStyle.Top;
             btnAgenda.FlatAppearance.BorderSize = 0;
             btnAgenda.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnAgenda.FlatStyle = FlatStyle.Flat;
             btnAgenda.ForeColor = Color.White;
-            btnAgenda.Location = new Point(0, 205);
+            btnAgenda.Location = new Point(0, 270);
             btnAgenda.Name = "btnAgenda";
-            btnAgenda.Size = new Size(197, 32);
-            btnAgenda.TabIndex = 8;
+            btnAgenda.Size = new Size(200, 32);
+            btnAgenda.TabIndex = 23;
             btnAgenda.Text = "Agenda";
             btnAgenda.UseVisualStyleBackColor = true;
-            btnAgenda.Click += btnAgenda_Click;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(0, 80, 200);
-            panel2.Location = new Point(0, 167);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(5, 32);
-            panel2.TabIndex = 7;
+            btnAgenda.Click += btnAgenda_Click_1;
             // 
             // btnClientes
             // 
+            btnClientes.Dock = DockStyle.Top;
             btnClientes.FlatAppearance.BorderSize = 0;
             btnClientes.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnClientes.FlatStyle = FlatStyle.Flat;
             btnClientes.ForeColor = Color.White;
-            btnClientes.Location = new Point(0, 167);
+            btnClientes.Location = new Point(0, 238);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(197, 32);
-            btnClientes.TabIndex = 6;
+            btnClientes.Size = new Size(200, 32);
+            btnClientes.TabIndex = 22;
             btnClientes.Text = "Clientes";
             btnClientes.UseVisualStyleBackColor = true;
-            btnClientes.Click += btnClientes_Click;
+            btnClientes.Click += btnClientes_Click_1;
             // 
-            // panel1
+            // panelSubProductos
             // 
-            panel1.BackColor = Color.FromArgb(0, 80, 200);
-            panel1.Location = new Point(0, 132);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(5, 32);
-            panel1.TabIndex = 5;
+            panelSubProductos.Controls.Add(btnProductos);
+            panelSubProductos.Controls.Add(btnHerramientas);
+            panelSubProductos.Controls.Add(panel2);
+            panelSubProductos.Controls.Add(panel1);
+            panelSubProductos.Dock = DockStyle.Top;
+            panelSubProductos.Location = new Point(0, 161);
+            panelSubProductos.Name = "panelSubProductos";
+            panelSubProductos.Size = new Size(200, 77);
+            panelSubProductos.TabIndex = 21;
             // 
             // btnProductos
             // 
@@ -279,13 +255,67 @@
             btnProductos.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnProductos.FlatStyle = FlatStyle.Flat;
             btnProductos.ForeColor = Color.White;
-            btnProductos.Location = new Point(0, 132);
+            btnProductos.Location = new Point(35, 3);
             btnProductos.Name = "btnProductos";
-            btnProductos.Size = new Size(200, 32);
-            btnProductos.TabIndex = 1;
+            btnProductos.Size = new Size(165, 32);
+            btnProductos.TabIndex = 18;
             btnProductos.Text = "Productos";
             btnProductos.UseVisualStyleBackColor = true;
-            btnProductos.Click += btnProductos_Click_1;
+            btnProductos.Click += btnProductos_Click;
+            // 
+            // btnHerramientas
+            // 
+            btnHerramientas.FlatAppearance.BorderSize = 0;
+            btnHerramientas.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnHerramientas.FlatStyle = FlatStyle.Flat;
+            btnHerramientas.ForeColor = Color.White;
+            btnHerramientas.Location = new Point(35, 43);
+            btnHerramientas.Name = "btnHerramientas";
+            btnHerramientas.Size = new Size(165, 28);
+            btnHerramientas.TabIndex = 20;
+            btnHerramientas.Text = "Herramientas";
+            btnHerramientas.UseVisualStyleBackColor = true;
+            btnHerramientas.Click += btnHerramientas_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(0, 80, 200);
+            panel2.Location = new Point(32, 43);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(5, 32);
+            panel2.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(0, 80, 200);
+            panel1.Location = new Point(32, 6);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(5, 32);
+            panel1.TabIndex = 5;
+            // 
+            // btnProductosHerramientas
+            // 
+            btnProductosHerramientas.Dock = DockStyle.Top;
+            btnProductosHerramientas.FlatAppearance.BorderSize = 0;
+            btnProductosHerramientas.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnProductosHerramientas.FlatStyle = FlatStyle.Flat;
+            btnProductosHerramientas.ForeColor = Color.White;
+            btnProductosHerramientas.Location = new Point(0, 129);
+            btnProductosHerramientas.Name = "btnProductosHerramientas";
+            btnProductosHerramientas.Size = new Size(200, 32);
+            btnProductosHerramientas.TabIndex = 1;
+            btnProductosHerramientas.Text = "Productos y Herramientas";
+            btnProductosHerramientas.UseVisualStyleBackColor = true;
+            btnProductosHerramientas.Click += btnProductos_Click_1;
+            // 
+            // panelLogo
+            // 
+            panelLogo.Controls.Add(btnInicio);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(200, 129);
+            panelLogo.TabIndex = 16;
             // 
             // btnCerrar
             // 
@@ -362,7 +392,9 @@
             Text = "Form1";
             panelContenedor.ResumeLayout(false);
             BarraMenu.ResumeLayout(false);
-            SubmenuVentas.ResumeLayout(false);
+            panelSubVentas.ResumeLayout(false);
+            panelSubProductos.ResumeLayout(false);
+            panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnMax).EndInit();
@@ -374,27 +406,29 @@
         #endregion
         private Panel panelContenedor;
         private Panel BarraMenu;
-        private Panel SubmenuVentas;
-        private Panel panel8;
         private Button button7;
-        private Panel panel7;
         private Button btnFacturacion;
-        private Panel panel5;
         private Button btnVentas;
-        private Panel panel4;
-        private Button btnAdministración;
-        private Panel panel3;
-        private Button btnAgenda;
         private Panel panel2;
-        private Button btnClientes;
         private Panel panel1;
-        private Button btnProductos;
+        private Button btnProductosHerramientas;
         private Button button1;
-        private Button btnInicio;
         private PictureBox btnCerrar;
         private PictureBox btnMin;
         private PictureBox btnMax;
         private PictureBox btnRestaurar;
         private Panel BarraTitle;
+        private Button btnProductos;
+        private Panel panelLogo;
+        private Button btnHerramientas;
+        private Button btnInicio;
+        private Button btnClientes;
+        private Panel panelSubProductos;
+        private Button btnAdministración;
+        private Button btnAdministracion;
+        private Button btnAgenda;
+        private Panel panelSubVentas;
+        private Panel panel5;
+        private Panel panel4;
     }
 }

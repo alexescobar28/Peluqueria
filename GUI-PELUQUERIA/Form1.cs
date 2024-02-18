@@ -6,7 +6,34 @@ namespace GUI_PELUQUERIA
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            customizeDesign();
             AbrirFormHija(new Inicio());
+        }
+        private void customizeDesign()
+        {
+            panelSubProductos.Visible = false;
+            panelSubVentas.Visible = false;
+        }
+        private void hideSubMenu()
+        {
+            if (panelSubProductos.Visible == true)
+            {
+                panelSubProductos.Visible = false;
+            }
+            if (panelSubVentas.Visible == true) { panelSubVentas.Visible = false; }
+        }
+        private void showSubMenu(Panel submenu)
+        {
+            if (submenu.Visible == false)
+            {
+                hideSubMenu();
+                submenu.Visible = true;
+            }
+            else
+            {
+                submenu.Visible = false;
+
+            }
         }
 
         private void btnMax_Click(object sender, EventArgs e)
@@ -46,13 +73,13 @@ namespace GUI_PELUQUERIA
 
         private void button6_Click(object sender, EventArgs e)
         {
-            SubmenuVentas.Visible = false;
+            panelSubVentas.Visible = false;
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SubmenuVentas.Visible = false;
+            panelSubVentas.Visible = false;
 
         }
         private void AbrirFormHija(object formhija)
@@ -71,7 +98,7 @@ namespace GUI_PELUQUERIA
 
         private void btnProductos_Click_1(object sender, EventArgs e)
         {
-            AbrirFormHija(new Productos());
+            showSubMenu(panelSubProductos);
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -86,7 +113,7 @@ namespace GUI_PELUQUERIA
 
         private void btnAdministración_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Administracion());
+
         }
 
 
@@ -98,19 +125,19 @@ namespace GUI_PELUQUERIA
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            SubmenuVentas.Visible = false;
+            panelSubVentas.Visible = false;
             AbrirFormHija(new Stock());
         }
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-            SubmenuVentas.Visible = false;
+            panelSubVentas.Visible = false;
             AbrirFormHija(new Facturacion());
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            SubmenuVentas.Visible = true;
+           
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -121,6 +148,48 @@ namespace GUI_PELUQUERIA
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            AbrirFormHija(new Productos());
+        }
+
+        private void btnHerramientas_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            AbrirFormHija(new Herramientas());
+        }
+
+        private void btnInicio_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClientes_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Clientes());
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAgenda_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Agenda());
+        }
+
+        private void btnAdministracion_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new Administracion());
+        }
+
+        private void btnVentas_Click_1(object sender, EventArgs e)
+        {
+            panelSubVentas.Visible = true;
         }
     }
 }
