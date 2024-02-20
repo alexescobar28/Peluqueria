@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace GUI_PELUQUERIA
 {
-    public partial class Productos : Form
+    public partial class btnLimpiar : Form
     {
         List<ClsProductos> miLista = new List<ClsProductos>();
-        public Productos()
+        public btnLimpiar()
         {
             InitializeComponent();
         }
@@ -124,6 +124,12 @@ namespace GUI_PELUQUERIA
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            LimpiarControles();
+            txtNombre.Focus();
         }
         //
     }

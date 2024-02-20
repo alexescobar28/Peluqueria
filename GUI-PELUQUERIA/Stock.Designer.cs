@@ -46,8 +46,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ActiveCaptionText;
-            label1.Location = new Point(453, 29);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(645, 9);
             label1.Name = "label1";
             label1.Size = new Size(77, 32);
             label1.TabIndex = 1;
@@ -74,9 +74,9 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(26, 27);
+            textBox1.Location = new Point(6, 27);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(312, 23);
+            textBox1.Size = new Size(332, 23);
             textBox1.TabIndex = 7;
             // 
             // groupBox1
@@ -89,7 +89,7 @@
             groupBox1.Size = new Size(461, 75);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Buscador";
+            groupBox1.Text = "Nombre Producto";
             // 
             // button1
             // 
@@ -97,16 +97,16 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 8;
-            button1.Text = "buscar";
+            button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(325, 189);
+            dataGridView1.Location = new Point(397, 182);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(461, 199);
+            dataGridView1.Size = new Size(543, 199);
             dataGridView1.TabIndex = 9;
             // 
             // groupBox2

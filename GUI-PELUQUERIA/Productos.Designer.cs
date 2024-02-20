@@ -1,6 +1,6 @@
 ﻿namespace GUI_PELUQUERIA
 {
-    partial class Productos
+    partial class btnLimpiar
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,7 @@
             erpError = new ErrorProvider(components);
             dtCaducidad = new DateTimePicker();
             dgvProductos = new DataGridView();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -55,7 +56,8 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(625, 80);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(634, 60);
             label1.Name = "label1";
             label1.Size = new Size(129, 32);
             label1.TabIndex = 0;
@@ -73,6 +75,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(btnActualizar);
             groupBox1.Controls.Add(btnConsultar);
             groupBox1.Controls.Add(btnRegistrar);
@@ -85,7 +88,7 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(278, 35);
+            btnActualizar.Location = new Point(354, 35);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(75, 23);
             btnActualizar.TabIndex = 3;
@@ -106,6 +109,7 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.ForeColor = Color.White;
             label2.Location = new Point(488, 130);
             label2.Name = "label2";
             label2.Size = new Size(51, 15);
@@ -116,7 +120,8 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(776, 130);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(764, 130);
             label3.Name = "label3";
             label3.Size = new Size(40, 15);
             label3.TabIndex = 5;
@@ -125,6 +130,7 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.ForeColor = Color.White;
             label4.Location = new Point(488, 195);
             label4.Name = "label4";
             label4.Size = new Size(114, 15);
@@ -134,6 +140,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = Color.White;
             label5.Location = new Point(764, 195);
             label5.Name = "label5";
             label5.Size = new Size(30, 15);
@@ -143,6 +150,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.ForeColor = Color.White;
             label6.Location = new Point(488, 264);
             label6.Name = "label6";
             label6.Size = new Size(63, 15);
@@ -153,21 +161,21 @@
             // 
             txtNombre.Location = new Point(488, 158);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(129, 23);
+            txtNombre.Size = new Size(200, 23);
             txtNombre.TabIndex = 9;
             // 
             // txtPrecio
             // 
             txtPrecio.Location = new Point(764, 158);
             txtPrecio.Name = "txtPrecio";
-            txtPrecio.Size = new Size(129, 23);
+            txtPrecio.Size = new Size(207, 23);
             txtPrecio.TabIndex = 10;
             // 
             // txtStockMin
             // 
             txtStockMin.Location = new Point(488, 298);
             txtStockMin.Name = "txtStockMin";
-            txtStockMin.Size = new Size(129, 23);
+            txtStockMin.Size = new Size(200, 23);
             txtStockMin.TabIndex = 12;
             // 
             // cbTipo
@@ -176,7 +184,7 @@
             cbTipo.Items.AddRange(new object[] { "Cuidado del cabello", "Styling", "Coloración", "Accesorios para el cabello", "Tratamientos capilares especializados", "Productos para barbería", "Productos de higiene y desinfección" });
             cbTipo.Location = new Point(764, 227);
             cbTipo.Name = "cbTipo";
-            cbTipo.Size = new Size(129, 23);
+            cbTipo.Size = new Size(207, 23);
             cbTipo.TabIndex = 14;
             cbTipo.Text = "Cuidado del cabello";
             // 
@@ -200,7 +208,17 @@
             dgvProductos.Size = new Size(616, 161);
             dgvProductos.TabIndex = 17;
             // 
-            // Productos
+            // button1
+            // 
+            button1.Location = new Point(253, 35);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Limpiar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
+            // 
+            // btnLimpiar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -220,7 +238,7 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Productos";
+            Name = "btnLimpiar";
             Text = "Productos";
             Load += Productos_Load_1;
             groupBox1.ResumeLayout(false);
@@ -249,5 +267,6 @@
         private ErrorProvider erpError;
         private DateTimePicker dtCaducidad;
         private DataGridView dgvProductos;
+        private Button button1;
     }
 }

@@ -92,6 +92,7 @@
             // 
             // btnConsultar
             // 
+            btnConsultar.ForeColor = Color.Black;
             btnConsultar.Location = new Point(365, 34);
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(75, 23);
@@ -143,6 +144,7 @@
             // 
             // button2
             // 
+            button2.ForeColor = Color.Black;
             button2.Location = new Point(365, 85);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
@@ -161,6 +163,7 @@
             // 
             // button1
             // 
+            button1.ForeColor = Color.Black;
             button1.Location = new Point(33, 85);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
@@ -190,6 +193,7 @@
             // 
             // button3
             // 
+            button3.ForeColor = Color.Black;
             button3.Location = new Point(25, 24);
             button3.Name = "button3";
             button3.Size = new Size(101, 48);
@@ -199,6 +203,7 @@
             // 
             // button4
             // 
+            button4.ForeColor = Color.Black;
             button4.Location = new Point(25, 114);
             button4.Name = "button4";
             button4.Size = new Size(101, 46);
@@ -265,6 +270,7 @@
             // 
             // button5
             // 
+            button5.ForeColor = Color.Black;
             button5.Location = new Point(36, 150);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
@@ -321,6 +327,7 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
+            ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Facturacion";
             Text = "Facturacion";

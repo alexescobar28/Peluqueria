@@ -64,6 +64,8 @@ namespace GUI_PELUQUERIA
             if (ValidarNombre() == false) { return; }
             if (ValidarPrecio() == false) { return; }
             else { MessageBox.Show("Herramienta Registrada"); }
+            LimpiarControles();
+            txtNombre.Focus();
 
         }
 
@@ -76,6 +78,9 @@ namespace GUI_PELUQUERIA
             else
             {
                 MessageBox.Show("No existe esa herramienta");
+                LimpiarControles();
+                txtNombre.Focus();
+                return;
             }
 
         }

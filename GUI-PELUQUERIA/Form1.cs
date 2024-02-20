@@ -153,7 +153,7 @@ namespace GUI_PELUQUERIA
         private void btnProductos_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            AbrirFormHija(new Productos());
+            AbrirFormHija(new btnLimpiar());
         }
 
         private void btnHerramientas_Click(object sender, EventArgs e)
@@ -164,7 +164,7 @@ namespace GUI_PELUQUERIA
 
         private void btnInicio_Click_1(object sender, EventArgs e)
         {
-
+            AbrirFormHija(new Inicio());
         }
 
         private void btnClientes_Click_1(object sender, EventArgs e)
