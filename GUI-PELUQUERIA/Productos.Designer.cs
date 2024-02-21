@@ -32,6 +32,7 @@
             label1 = new Label();
             btnRegistrar = new Button();
             groupBox1 = new GroupBox();
+            button1 = new Button();
             btnActualizar = new Button();
             btnConsultar = new Button();
             label2 = new Label();
@@ -46,7 +47,6 @@
             erpError = new ErrorProvider(components);
             dtCaducidad = new DateTimePicker();
             dgvProductos = new DataGridView();
-            button1 = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -85,6 +85,16 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Opciones";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(253, 35);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Limpiar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // btnActualizar
             // 
@@ -207,16 +217,7 @@
             dgvProductos.Name = "dgvProductos";
             dgvProductos.Size = new Size(616, 161);
             dgvProductos.TabIndex = 17;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(253, 35);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Limpiar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            dgvProductos.CellContentClick += dgvProductos_CellContentClick;
             // 
             // btnLimpiar
             // 

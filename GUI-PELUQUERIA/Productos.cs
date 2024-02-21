@@ -33,7 +33,7 @@ namespace GUI_PELUQUERIA
             miProducto.Precio = txtPrecio.Text;
             miProducto.FechaCaducidad = dtCaducidad.Text;
             miProducto.StockInicial = txtStockMin.Text;
-            miProducto.Tipo = cbTipo.ToString();
+            miProducto.Tipo = Convert.ToString(cbTipo.SelectedItem);
             miLista.Add(miProducto);
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = miLista;
@@ -123,13 +123,19 @@ namespace GUI_PELUQUERIA
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (ValidarNombre() == false) { MessageBox.Show("Se debe llenar el nombre");return; }
+            MessageBox.Show("Se actualizo");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             LimpiarControles();
             txtNombre.Focus();
+        }
+
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
         //
     }

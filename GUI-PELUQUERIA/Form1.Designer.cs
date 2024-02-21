@@ -54,6 +54,7 @@
             btnMax = new PictureBox();
             btnRestaurar = new PictureBox();
             BarraTitle = new Panel();
+            button2 = new Button();
             panelContenedor.SuspendLayout();
             BarraMenu.SuspendLayout();
             panelSubVentas.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             BarraMenu.AutoScroll = true;
             BarraMenu.BackColor = Color.FromArgb(26, 32, 40);
+            BarraMenu.Controls.Add(button2);
             BarraMenu.Controls.Add(panelSubVentas);
             BarraMenu.Controls.Add(btnVentas);
             BarraMenu.Controls.Add(btnAdministracion);
@@ -378,6 +380,21 @@
             BarraTitle.Name = "BarraTitle";
             BarraTitle.Size = new Size(1300, 50);
             BarraTitle.TabIndex = 1;
+            BarraTitle.Paint += BarraTitle_Paint;
+            BarraTitle.MouseDown += BarraTitle_MouseDown;
+            BarraTitle.MouseMove += BarraTitle_MouseMove;
+            BarraTitle.MouseUp += BarraTitle_MouseUp;
+            // 
+            // button2
+            // 
+            button2.Dock = DockStyle.Bottom;
+            button2.Location = new Point(0, 575);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 25);
+            button2.TabIndex = 26;
+            button2.Text = "Log Out";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
             // Form1
             // 
@@ -430,5 +447,6 @@
         private Panel panelSubVentas;
         private Panel panel5;
         private Panel panel4;
+        private Button button2;
     }
 }

@@ -41,6 +41,7 @@ namespace GUI_PELUQUERIA
             if (ValidarCorreo() == false) { return; }
             if (ValidarTelefono() == false) { return; }
             if (ValidarFechaNacimiento() == false) { return; }
+            MessageBox.Show("Cliente registrado");
 
         }
         //validar el nombre
@@ -141,6 +142,12 @@ namespace GUI_PELUQUERIA
                 erpError.SetError(txtCorreo, "");
                 return true;
             }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if(ValidarCedula() == false) { MessageBox.Show("Ingrese una cédula para consultar");return; }
+            
         }
     }
 }

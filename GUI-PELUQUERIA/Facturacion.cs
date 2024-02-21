@@ -40,8 +40,19 @@ namespace GUI_PELUQUERIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StockAgregar agregarProducto = new StockAgregar();
-            agregarProducto.Show();
+             
+            if(Convert.ToString(comboBox1.SelectedItem)=="Venta de Producto")
+            {
+                StockAgregar agregarProducto = new StockAgregar();
+                agregarProducto.Show();
+            }
+            else
+            {
+                MessageBox.Show("Se deberia agregar al grid");
+            }
+            
         }
+
+        
     }
 }

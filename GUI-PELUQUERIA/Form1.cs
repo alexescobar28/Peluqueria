@@ -9,6 +9,7 @@ namespace GUI_PELUQUERIA
             customizeDesign();
             AbrirFormHija(new Inicio());
         }
+        int m, mx, my;
         private void customizeDesign()
         {
             panelSubProductos.Visible = false;
@@ -137,7 +138,7 @@ namespace GUI_PELUQUERIA
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -190,6 +191,39 @@ namespace GUI_PELUQUERIA
         private void btnVentas_Click_1(object sender, EventArgs e)
         {
             panelSubVentas.Visible = true;
+        }
+
+        private void BarraTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BarraTitle_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void BarraTitle_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void BarraTitle_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Login lg = new Login();
+            lg.Show();
+            this.Hide();
+            
         }
     }
 }

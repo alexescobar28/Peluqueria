@@ -157,6 +157,7 @@
             // 
             // button3
             // 
+            button3.ForeColor = Color.Black;
             button3.Location = new Point(331, 35);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
@@ -166,6 +167,7 @@
             // 
             // button2
             // 
+            button2.ForeColor = Color.Black;
             button2.Location = new Point(185, 35);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
@@ -176,6 +178,7 @@
             // 
             // btnRegistrar
             // 
+            btnRegistrar.ForeColor = Color.Black;
             btnRegistrar.Location = new Point(30, 35);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(75, 23);

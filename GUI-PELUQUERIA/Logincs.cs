@@ -34,7 +34,7 @@ namespace GUI_PELUQUERIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text=="Usuario" && txtPassword.Text == "1234")
+            if (txtUser.Text == "Usuario" && txtPassword.Text == "1234")
             {
                 Form1 menu = new Form1();
                 this.Hide();
@@ -42,12 +42,17 @@ namespace GUI_PELUQUERIA
             }
             else
             {
-                MessageBox.Show("Los datos ingresados son incorrectos");   
+                MessageBox.Show("Los datos ingresados son incorrectos");
                 txtUser.Clear();
                 txtPassword.Clear();
             }
-             
-            
+
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
