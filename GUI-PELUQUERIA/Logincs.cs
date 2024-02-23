@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace GUI_PELUQUERIA
 {
+    
     public partial class Login : Form
     {
+        static string conexionstring= "server = LAPTOP-MQ2NT5FG; database =Peluqueria; Integrated Security=True";
+        SqlConnection connection=new SqlConnection(conexionstring);
+        
         public Login()
         {
             InitializeComponent();
+        
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -25,6 +30,8 @@ namespace GUI_PELUQUERIA
         private void button3_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            
+
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -39,6 +46,7 @@ namespace GUI_PELUQUERIA
                 Form1 menu = new Form1();
                 this.Hide();
                 menu.Show();
+          
             }
             else
             {
@@ -53,6 +61,11 @@ namespace GUI_PELUQUERIA
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+       
         }
     }
 }

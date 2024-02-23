@@ -33,13 +33,19 @@
             button1 = new Button();
             btnInicio = new Button();
             BarraMenu = new Panel();
+            panelSubAdmin = new Panel();
+            panel6 = new Panel();
+            panel7 = new Panel();
+            btnAparametros = new Button();
+            btnAusuarios = new Button();
+            btnAdministracion = new Button();
+            button2 = new Button();
             panelSubVentas = new Panel();
             panel5 = new Panel();
             panel4 = new Panel();
-            button7 = new Button();
+            btnInventario = new Button();
             btnFacturacion = new Button();
             btnVentas = new Button();
-            btnAdministracion = new Button();
             btnAgenda = new Button();
             btnClientes = new Button();
             panelSubProductos = new Panel();
@@ -54,9 +60,9 @@
             btnMax = new PictureBox();
             btnRestaurar = new PictureBox();
             BarraTitle = new Panel();
-            button2 = new Button();
             panelContenedor.SuspendLayout();
             BarraMenu.SuspendLayout();
+            panelSubAdmin.SuspendLayout();
             panelSubVentas.SuspendLayout();
             panelSubProductos.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -89,29 +95,31 @@
             // 
             // btnInicio
             // 
+            btnInicio.BackColor = SystemColors.ActiveCaptionText;
             btnInicio.FlatAppearance.BorderSize = 0;
             btnInicio.FlatStyle = FlatStyle.Flat;
             btnInicio.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.ForeColor = SystemColors.MenuHighlight;
+            btnInicio.ForeColor = Color.White;
             btnInicio.Image = (Image)resources.GetObject("btnInicio.Image");
             btnInicio.ImageAlign = ContentAlignment.TopCenter;
-            btnInicio.Location = new Point(3, 6);
+            btnInicio.Location = new Point(0, 0);
             btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(197, 117);
+            btnInicio.Size = new Size(200, 123);
             btnInicio.TabIndex = 17;
             btnInicio.Text = "INICIO";
             btnInicio.TextAlign = ContentAlignment.BottomCenter;
-            btnInicio.UseVisualStyleBackColor = true;
+            btnInicio.UseVisualStyleBackColor = false;
             btnInicio.Click += btnInicio_Click_1;
             // 
             // BarraMenu
             // 
             BarraMenu.AutoScroll = true;
             BarraMenu.BackColor = Color.FromArgb(26, 32, 40);
+            BarraMenu.Controls.Add(panelSubAdmin);
+            BarraMenu.Controls.Add(btnAdministracion);
             BarraMenu.Controls.Add(button2);
             BarraMenu.Controls.Add(panelSubVentas);
             BarraMenu.Controls.Add(btnVentas);
-            BarraMenu.Controls.Add(btnAdministracion);
             BarraMenu.Controls.Add(btnAgenda);
             BarraMenu.Controls.Add(btnClientes);
             BarraMenu.Controls.Add(panelSubProductos);
@@ -123,14 +131,98 @@
             BarraMenu.Size = new Size(200, 600);
             BarraMenu.TabIndex = 3;
             // 
+            // panelSubAdmin
+            // 
+            panelSubAdmin.Controls.Add(panel6);
+            panelSubAdmin.Controls.Add(panel7);
+            panelSubAdmin.Controls.Add(btnAparametros);
+            panelSubAdmin.Controls.Add(btnAusuarios);
+            panelSubAdmin.Dock = DockStyle.Top;
+            panelSubAdmin.Location = new Point(0, 443);
+            panelSubAdmin.Name = "panelSubAdmin";
+            panelSubAdmin.Size = new Size(200, 81);
+            panelSubAdmin.TabIndex = 28;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.FromArgb(0, 80, 200);
+            panel6.Location = new Point(35, 44);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(5, 32);
+            panel6.TabIndex = 18;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(0, 80, 200);
+            panel7.Location = new Point(35, 6);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(5, 32);
+            panel7.TabIndex = 19;
+            // 
+            // btnAparametros
+            // 
+            btnAparametros.FlatAppearance.BorderSize = 0;
+            btnAparametros.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnAparametros.FlatStyle = FlatStyle.Flat;
+            btnAparametros.ForeColor = Color.White;
+            btnAparametros.Location = new Point(32, 40);
+            btnAparametros.Name = "btnAparametros";
+            btnAparametros.Size = new Size(168, 28);
+            btnAparametros.TabIndex = 20;
+            btnAparametros.Text = "Parámetros";
+            btnAparametros.UseVisualStyleBackColor = true;
+            // 
+            // btnAusuarios
+            // 
+            btnAusuarios.FlatAppearance.BorderSize = 0;
+            btnAusuarios.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnAusuarios.FlatStyle = FlatStyle.Flat;
+            btnAusuarios.ForeColor = Color.White;
+            btnAusuarios.Location = new Point(32, 6);
+            btnAusuarios.Name = "btnAusuarios";
+            btnAusuarios.Size = new Size(168, 28);
+            btnAusuarios.TabIndex = 21;
+            btnAusuarios.Text = "Usuarios";
+            btnAusuarios.UseVisualStyleBackColor = true;
+            // 
+            // btnAdministracion
+            // 
+            btnAdministracion.Dock = DockStyle.Top;
+            btnAdministracion.FlatAppearance.BorderSize = 0;
+            btnAdministracion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnAdministracion.FlatStyle = FlatStyle.Flat;
+            btnAdministracion.ForeColor = Color.White;
+            btnAdministracion.Location = new Point(0, 411);
+            btnAdministracion.Name = "btnAdministracion";
+            btnAdministracion.Size = new Size(200, 32);
+            btnAdministracion.TabIndex = 27;
+            btnAdministracion.Text = "Administración";
+            btnAdministracion.UseVisualStyleBackColor = true;
+            btnAdministracion.Click += btnAdministracion_Click_1;
+            // 
+            // button2
+            // 
+            button2.Dock = DockStyle.Bottom;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(0, 575);
+            button2.Name = "button2";
+            button2.Size = new Size(200, 25);
+            button2.TabIndex = 26;
+            button2.Text = "Log Out";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
+            // 
             // panelSubVentas
             // 
             panelSubVentas.Controls.Add(panel5);
             panelSubVentas.Controls.Add(panel4);
-            panelSubVentas.Controls.Add(button7);
+            panelSubVentas.Controls.Add(btnInventario);
             panelSubVentas.Controls.Add(btnFacturacion);
             panelSubVentas.Dock = DockStyle.Top;
-            panelSubVentas.Location = new Point(0, 366);
+            panelSubVentas.Location = new Point(0, 334);
             panelSubVentas.Name = "panelSubVentas";
             panelSubVentas.Size = new Size(200, 77);
             panelSubVentas.TabIndex = 22;
@@ -151,19 +243,19 @@
             panel4.Size = new Size(5, 32);
             panel4.TabIndex = 6;
             // 
-            // button7
+            // btnInventario
             // 
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(32, 8);
-            button7.Name = "button7";
-            button7.Size = new Size(168, 28);
-            button7.TabIndex = 17;
-            button7.Text = "Stock";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click_1;
+            btnInventario.FlatAppearance.BorderSize = 0;
+            btnInventario.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnInventario.FlatStyle = FlatStyle.Flat;
+            btnInventario.ForeColor = Color.White;
+            btnInventario.Location = new Point(32, 8);
+            btnInventario.Name = "btnInventario";
+            btnInventario.Size = new Size(168, 28);
+            btnInventario.TabIndex = 17;
+            btnInventario.Text = "Inventario";
+            btnInventario.UseVisualStyleBackColor = true;
+            btnInventario.Click += button7_Click_1;
             // 
             // btnFacturacion
             // 
@@ -186,28 +278,13 @@
             btnVentas.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnVentas.FlatStyle = FlatStyle.Flat;
             btnVentas.ForeColor = Color.White;
-            btnVentas.Location = new Point(0, 334);
+            btnVentas.Location = new Point(0, 302);
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(200, 32);
             btnVentas.TabIndex = 25;
             btnVentas.Text = "Ventas";
             btnVentas.UseVisualStyleBackColor = true;
             btnVentas.Click += btnVentas_Click_1;
-            // 
-            // btnAdministracion
-            // 
-            btnAdministracion.Dock = DockStyle.Top;
-            btnAdministracion.FlatAppearance.BorderSize = 0;
-            btnAdministracion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btnAdministracion.FlatStyle = FlatStyle.Flat;
-            btnAdministracion.ForeColor = Color.White;
-            btnAdministracion.Location = new Point(0, 302);
-            btnAdministracion.Name = "btnAdministracion";
-            btnAdministracion.Size = new Size(200, 32);
-            btnAdministracion.TabIndex = 24;
-            btnAdministracion.Text = "Administración";
-            btnAdministracion.UseVisualStyleBackColor = true;
-            btnAdministracion.Click += btnAdministracion_Click;
             // 
             // btnAgenda
             // 
@@ -385,17 +462,6 @@
             BarraTitle.MouseMove += BarraTitle_MouseMove;
             BarraTitle.MouseUp += BarraTitle_MouseUp;
             // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Bottom;
-            button2.Location = new Point(0, 575);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 25);
-            button2.TabIndex = 26;
-            button2.Text = "Log Out";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -409,6 +475,7 @@
             Text = "Form1";
             panelContenedor.ResumeLayout(false);
             BarraMenu.ResumeLayout(false);
+            panelSubAdmin.ResumeLayout(false);
             panelSubVentas.ResumeLayout(false);
             panelSubProductos.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
@@ -423,7 +490,7 @@
         #endregion
         private Panel panelContenedor;
         private Panel BarraMenu;
-        private Button button7;
+        private Button btnInventario;
         private Button btnFacturacion;
         private Button btnVentas;
         private Panel panel2;
@@ -442,11 +509,16 @@
         private Button btnClientes;
         private Panel panelSubProductos;
         private Button btnAdministración;
-        private Button btnAdministracion;
         private Button btnAgenda;
         private Panel panelSubVentas;
         private Panel panel5;
         private Panel panel4;
         private Button button2;
+        private Panel panelSubAdmin;
+        private Panel panel6;
+        private Panel panel7;
+        private Button btnAparametros;
+        private Button btnAusuarios;
+        private Button btnAdministracion;
     }
 }

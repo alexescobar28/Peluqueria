@@ -14,6 +14,7 @@ namespace GUI_PELUQUERIA
         {
             panelSubProductos.Visible = false;
             panelSubVentas.Visible = false;
+            panelSubAdmin.Visible = false;  
         }
         private void hideSubMenu()
         {
@@ -22,6 +23,7 @@ namespace GUI_PELUQUERIA
                 panelSubProductos.Visible = false;
             }
             if (panelSubVentas.Visible == true) { panelSubVentas.Visible = false; }
+            if (panelSubAdmin.Visible == true) { panelSubAdmin.Visible = false; }
         }
         private void showSubMenu(Panel submenu)
         {
@@ -154,7 +156,7 @@ namespace GUI_PELUQUERIA
         private void btnProductos_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            AbrirFormHija(new btnLimpiar());
+            AbrirFormHija(new Productos());
         }
 
         private void btnHerramientas_Click(object sender, EventArgs e)
@@ -223,7 +225,12 @@ namespace GUI_PELUQUERIA
             Login lg = new Login();
             lg.Show();
             this.Hide();
-            
+
+        }
+
+        private void btnAdministracion_Click_1(object sender, EventArgs e)
+        {
+            panelSubAdmin.Visible = true;
         }
     }
 }
