@@ -73,9 +73,9 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(291, 105);
             label3.Name = "label3";
-            label3.Size = new Size(54, 15);
+            label3.Size = new Size(67, 15);
             label3.TabIndex = 3;
-            label3.Text = "Nombre:";
+            label3.Text = "C.I. Cliente:";
             // 
             // label4
             // 

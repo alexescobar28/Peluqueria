@@ -41,7 +41,6 @@
             label11 = new Label();
             label12 = new Label();
             label13 = new Label();
-            label14 = new Label();
             txtCedula = new TextBox();
             txtTelefono = new TextBox();
             txtApellido = new TextBox();
@@ -55,20 +54,28 @@
             cbEstadoCivil = new ComboBox();
             cbSexo = new ComboBox();
             groupBox1 = new GroupBox();
-            btnActualizar = new Button();
-            btnConsultar = new Button();
+            btnEliminar = new Button();
+            button2 = new Button();
+            button3 = new Button();
             button1 = new Button();
             erpError = new ErrorProvider(components);
             dtpFecha = new DateTimePicker();
+            groupBox2 = new GroupBox();
+            textBox1 = new TextBox();
+            label15 = new Label();
+            dataGridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(598, 22);
+            label1.Location = new Point(598, 9);
             label1.Name = "label1";
             label1.Size = new Size(107, 32);
             label1.TabIndex = 2;
@@ -77,7 +84,8 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(347, 82);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(350, 58);
             label2.Name = "label2";
             label2.Size = new Size(47, 15);
             label2.TabIndex = 3;
@@ -87,7 +95,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(854, 82);
+            label3.Location = new Point(838, 58);
             label3.Name = "label3";
             label3.Size = new Size(59, 15);
             label3.TabIndex = 4;
@@ -96,7 +104,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(854, 135);
+            label4.Location = new Point(838, 119);
             label4.Name = "label4";
             label4.Size = new Size(123, 15);
             label4.TabIndex = 5;
@@ -106,7 +114,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(854, 202);
+            label5.Location = new Point(838, 178);
             label5.Name = "label5";
             label5.Size = new Size(105, 15);
             label5.TabIndex = 6;
@@ -115,7 +123,8 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(605, 82);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(591, 58);
             label6.Name = "label6";
             label6.Size = new Size(59, 15);
             label6.TabIndex = 7;
@@ -124,7 +133,8 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(350, 135);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(353, 111);
             label7.Name = "label7";
             label7.Size = new Size(120, 15);
             label7.TabIndex = 8;
@@ -133,7 +143,8 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(602, 135);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(591, 111);
             label9.Name = "label9";
             label9.Size = new Size(103, 15);
             label9.TabIndex = 10;
@@ -142,7 +153,8 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(347, 202);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(350, 178);
             label10.Name = "label10";
             label10.Size = new Size(68, 15);
             label10.TabIndex = 11;
@@ -151,7 +163,8 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(605, 202);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(591, 178);
             label11.Name = "label11";
             label11.Size = new Size(32, 15);
             label11.TabIndex = 12;
@@ -160,7 +173,8 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(602, 272);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(591, 248);
             label12.Name = "label12";
             label12.Size = new Size(49, 15);
             label12.TabIndex = 13;
@@ -169,81 +183,72 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(347, 272);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(350, 248);
             label13.Name = "label13";
             label13.Size = new Size(133, 15);
             label13.TabIndex = 14;
             label13.Text = "Enfermedades Capilares";
             // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(398, 166);
-            label14.Name = "label14";
-            label14.Size = new Size(139, 15);
-            label14.TabIndex = 15;
-            label14.Text = "Preferencia de Productos";
-            label14.Click += label14_Click;
-            // 
             // txtCedula
             // 
-            txtCedula.Location = new Point(349, 100);
+            txtCedula.Location = new Point(352, 76);
             txtCedula.Name = "txtCedula";
-            txtCedula.Size = new Size(220, 23);
+            txtCedula.Size = new Size(215, 23);
             txtCedula.TabIndex = 16;
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(350, 162);
+            txtTelefono.Location = new Point(353, 138);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(217, 23);
+            txtTelefono.Size = new Size(214, 23);
             txtTelefono.TabIndex = 17;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(854, 100);
+            txtApellido.Location = new Point(591, 76);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(217, 23);
+            txtApellido.Size = new Size(213, 23);
             txtApellido.TabIndex = 18;
             // 
             // txtDirDomiciliaria
             // 
-            txtDirDomiciliaria.Location = new Point(854, 158);
+            txtDirDomiciliaria.Location = new Point(838, 137);
             txtDirDomiciliaria.Name = "txtDirDomiciliaria";
             txtDirDomiciliaria.Size = new Size(217, 23);
             txtDirDomiciliaria.TabIndex = 19;
             // 
             // txtEnfermedades
             // 
-            txtEnfermedades.Location = new Point(347, 290);
+            txtEnfermedades.Location = new Point(838, 266);
             txtEnfermedades.Name = "txtEnfermedades";
             txtEnfermedades.Size = new Size(217, 23);
             txtEnfermedades.TabIndex = 20;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(598, 100);
+            txtNombre.Location = new Point(838, 76);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(217, 23);
             txtNombre.TabIndex = 21;
             // 
             // txtAlergias
             // 
-            txtAlergias.Location = new Point(598, 290);
+            txtAlergias.Location = new Point(350, 266);
             txtAlergias.Name = "txtAlergias";
             txtAlergias.Size = new Size(217, 23);
             txtAlergias.TabIndex = 22;
             // 
             // txtCorreo
             // 
-            txtCorreo.Location = new Point(854, 230);
+            txtCorreo.Location = new Point(838, 206);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.Size = new Size(217, 23);
             txtCorreo.TabIndex = 23;
             // 
             // txtPreferencias
             // 
-            txtPreferencias.Location = new Point(854, 290);
+            txtPreferencias.Location = new Point(587, 266);
             txtPreferencias.Name = "txtPreferencias";
             txtPreferencias.Size = new Size(217, 23);
             txtPreferencias.TabIndex = 25;
@@ -251,17 +256,17 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(854, 272);
+            label8.Location = new Point(838, 248);
             label8.Name = "label8";
-            label8.Size = new Size(142, 15);
+            label8.Size = new Size(139, 15);
             label8.TabIndex = 26;
-            label8.Text = "Preferencias del Producto";
+            label8.Text = "Preferencias de Producto";
             // 
             // cbEstadoCivil
             // 
             cbEstadoCivil.FormattingEnabled = true;
             cbEstadoCivil.Items.AddRange(new object[] { "Soltero", "Casado", "Divorciado", "Viudo ", "Unión Libre" });
-            cbEstadoCivil.Location = new Point(349, 230);
+            cbEstadoCivil.Location = new Point(352, 206);
             cbEstadoCivil.Name = "cbEstadoCivil";
             cbEstadoCivil.Size = new Size(215, 23);
             cbEstadoCivil.TabIndex = 27;
@@ -271,45 +276,59 @@
             // 
             cbSexo.FormattingEnabled = true;
             cbSexo.Items.AddRange(new object[] { "Masculino ", "Femenino" });
-            cbSexo.Location = new Point(598, 230);
+            cbSexo.Location = new Point(591, 206);
             cbSexo.Name = "cbSexo";
-            cbSexo.Size = new Size(217, 23);
+            cbSexo.Size = new Size(213, 23);
             cbSexo.TabIndex = 28;
-            cbSexo.Text = "Masculino";
+            cbSexo.Text = "Masculino ";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(btnActualizar);
-            groupBox1.Controls.Add(btnConsultar);
+            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(btnEliminar);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button1);
-            groupBox1.Location = new Point(499, 344);
+            groupBox1.Location = new Point(414, 295);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(391, 81);
+            groupBox1.Size = new Size(591, 81);
             groupBox1.TabIndex = 29;
             groupBox1.TabStop = false;
             groupBox1.Text = "Opciones";
             // 
-            // btnActualizar
+            // btnEliminar
             // 
-            btnActualizar.Location = new Point(278, 35);
-            btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(75, 23);
-            btnActualizar.TabIndex = 3;
-            btnActualizar.Text = "Actualizar";
-            btnActualizar.UseVisualStyleBackColor = true;
+            btnEliminar.ForeColor = Color.Black;
+            btnEliminar.Location = new Point(487, 36);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(98, 23);
+            btnEliminar.TabIndex = 8;
+            btnEliminar.Text = "Cambiar Estado";
+            btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // btnConsultar
+            // button2
             // 
-            btnConsultar.Location = new Point(146, 35);
-            btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(75, 23);
-            btnConsultar.TabIndex = 2;
-            btnConsultar.Text = "Consultar";
-            btnConsultar.UseVisualStyleBackColor = true;
-            btnConsultar.Click += btnConsultar_Click;
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(118, 35);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 7;
+            button2.Text = "Limpiar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.ForeColor = Color.Black;
+            button3.Location = new Point(217, 35);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 6;
+            button3.Text = "Actualizar";
+            button3.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            button1.ForeColor = Color.Black;
             button1.Location = new Point(30, 35);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
@@ -325,17 +344,65 @@
             // dtpFecha
             // 
             dtpFecha.Format = DateTimePickerFormat.Short;
-            dtpFecha.Location = new Point(598, 159);
+            dtpFecha.Location = new Point(591, 134);
             dtpFecha.Name = "dtpFecha";
-            dtpFecha.Size = new Size(217, 23);
+            dtpFecha.Size = new Size(213, 23);
             dtpFecha.TabIndex = 30;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(textBox1);
+            groupBox2.Controls.Add(label15);
+            groupBox2.Location = new Point(455, 382);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(447, 62);
+            groupBox2.TabIndex = 31;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Buscar";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(118, 27);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(281, 23);
+            textBox1.TabIndex = 1;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(31, 30);
+            label15.Name = "label15";
+            label15.Size = new Size(44, 15);
+            label15.TabIndex = 0;
+            label15.Text = "Cédula";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(318, 459);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(737, 88);
+            dataGridView1.TabIndex = 32;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Enabled = false;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Activo ", "Inactivo" });
+            comboBox1.Location = new Point(348, 36);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 9;
+            comboBox1.Text = "Activo";
             // 
             // Clientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(49, 66, 82);
-            ClientSize = new Size(1083, 466);
+            ClientSize = new Size(1266, 629);
+            Controls.Add(dataGridView1);
+            Controls.Add(groupBox2);
             Controls.Add(dtpFecha);
             Controls.Add(groupBox1);
             Controls.Add(cbSexo);
@@ -350,7 +417,6 @@
             Controls.Add(txtApellido);
             Controls.Add(txtTelefono);
             Controls.Add(txtCedula);
-            Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
             Controls.Add(label11);
@@ -363,11 +429,15 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
             Name = "Clientes";
             Text = "Clientes";
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)erpError).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -386,7 +456,6 @@
         private Label label11;
         private Label label12;
         private Label label13;
-        private Label label14;
         private TextBox txtCedula;
         private TextBox txtTelefono;
         private TextBox txtApellido;
@@ -400,10 +469,16 @@
         private ComboBox cbEstadoCivil;
         private ComboBox cbSexo;
         private GroupBox groupBox1;
-        private Button btnActualizar;
-        private Button btnConsultar;
         private Button button1;
         private ErrorProvider erpError;
         private DateTimePicker dtpFecha;
+        private Button btnEliminar;
+        private Button button2;
+        private Button button3;
+        private GroupBox groupBox2;
+        private TextBox textBox1;
+        private Label label15;
+        private DataGridView dataGridView1;
+        private ComboBox comboBox1;
     }
 }

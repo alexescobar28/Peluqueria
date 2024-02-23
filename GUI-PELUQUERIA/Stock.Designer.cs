@@ -47,11 +47,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(645, 9);
+            label1.Location = new Point(712, 9);
             label1.Name = "label1";
-            label1.Size = new Size(77, 32);
+            label1.Size = new Size(131, 32);
             label1.TabIndex = 1;
-            label1.Text = "Stock";
+            label1.Text = "Inventario";
             // 
             // label3
             // 

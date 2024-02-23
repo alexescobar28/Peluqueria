@@ -38,12 +38,11 @@
             panel7 = new Panel();
             btnAparametros = new Button();
             btnAusuarios = new Button();
-            btnAdministracion = new Button();
+            btnInventario = new Button();
+            button3 = new Button();
             button2 = new Button();
             panelSubVentas = new Panel();
             panel5 = new Panel();
-            panel4 = new Panel();
-            btnInventario = new Button();
             btnFacturacion = new Button();
             btnVentas = new Button();
             btnAgenda = new Button();
@@ -116,7 +115,8 @@
             BarraMenu.AutoScroll = true;
             BarraMenu.BackColor = Color.FromArgb(26, 32, 40);
             BarraMenu.Controls.Add(panelSubAdmin);
-            BarraMenu.Controls.Add(btnAdministracion);
+            BarraMenu.Controls.Add(btnInventario);
+            BarraMenu.Controls.Add(button3);
             BarraMenu.Controls.Add(button2);
             BarraMenu.Controls.Add(panelSubVentas);
             BarraMenu.Controls.Add(btnVentas);
@@ -138,7 +138,7 @@
             panelSubAdmin.Controls.Add(btnAparametros);
             panelSubAdmin.Controls.Add(btnAusuarios);
             panelSubAdmin.Dock = DockStyle.Top;
-            panelSubAdmin.Location = new Point(0, 443);
+            panelSubAdmin.Location = new Point(0, 425);
             panelSubAdmin.Name = "panelSubAdmin";
             panelSubAdmin.Size = new Size(200, 81);
             panelSubAdmin.TabIndex = 28;
@@ -169,8 +169,9 @@
             btnAparametros.Name = "btnAparametros";
             btnAparametros.Size = new Size(168, 28);
             btnAparametros.TabIndex = 20;
-            btnAparametros.Text = "Parámetros";
+            btnAparametros.Text = "Administración Parámetros";
             btnAparametros.UseVisualStyleBackColor = true;
+            btnAparametros.Click += btnAparametros_Click;
             // 
             // btnAusuarios
             // 
@@ -182,23 +183,39 @@
             btnAusuarios.Name = "btnAusuarios";
             btnAusuarios.Size = new Size(168, 28);
             btnAusuarios.TabIndex = 21;
-            btnAusuarios.Text = "Usuarios";
+            btnAusuarios.Text = "Administración Usuarios";
             btnAusuarios.UseVisualStyleBackColor = true;
+            btnAusuarios.Click += btnAusuarios_Click;
             // 
-            // btnAdministracion
+            // btnInventario
             // 
-            btnAdministracion.Dock = DockStyle.Top;
-            btnAdministracion.FlatAppearance.BorderSize = 0;
-            btnAdministracion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btnAdministracion.FlatStyle = FlatStyle.Flat;
-            btnAdministracion.ForeColor = Color.White;
-            btnAdministracion.Location = new Point(0, 411);
-            btnAdministracion.Name = "btnAdministracion";
-            btnAdministracion.Size = new Size(200, 32);
-            btnAdministracion.TabIndex = 27;
-            btnAdministracion.Text = "Administración";
-            btnAdministracion.UseVisualStyleBackColor = true;
-            btnAdministracion.Click += btnAdministracion_Click_1;
+            btnInventario.Dock = DockStyle.Top;
+            btnInventario.FlatAppearance.BorderSize = 0;
+            btnInventario.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            btnInventario.FlatStyle = FlatStyle.Flat;
+            btnInventario.ForeColor = Color.White;
+            btnInventario.Location = new Point(0, 397);
+            btnInventario.Name = "btnInventario";
+            btnInventario.Size = new Size(200, 28);
+            btnInventario.TabIndex = 17;
+            btnInventario.Text = "Administración del Sistema";
+            btnInventario.UseVisualStyleBackColor = true;
+            btnInventario.Click += button7_Click_1;
+            // 
+            // button3
+            // 
+            button3.Dock = DockStyle.Top;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(0, 374);
+            button3.Name = "button3";
+            button3.Size = new Size(200, 23);
+            button3.TabIndex = 29;
+            button3.Text = "Inventario";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -218,44 +235,20 @@
             // panelSubVentas
             // 
             panelSubVentas.Controls.Add(panel5);
-            panelSubVentas.Controls.Add(panel4);
-            panelSubVentas.Controls.Add(btnInventario);
             panelSubVentas.Controls.Add(btnFacturacion);
             panelSubVentas.Dock = DockStyle.Top;
             panelSubVentas.Location = new Point(0, 334);
             panelSubVentas.Name = "panelSubVentas";
-            panelSubVentas.Size = new Size(200, 77);
+            panelSubVentas.Size = new Size(200, 40);
             panelSubVentas.TabIndex = 22;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(0, 80, 200);
-            panel5.Location = new Point(35, 46);
+            panel5.Location = new Point(35, 3);
             panel5.Name = "panel5";
             panel5.Size = new Size(5, 32);
             panel5.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.FromArgb(0, 80, 200);
-            panel4.Location = new Point(35, 8);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(5, 32);
-            panel4.TabIndex = 6;
-            // 
-            // btnInventario
-            // 
-            btnInventario.FlatAppearance.BorderSize = 0;
-            btnInventario.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
-            btnInventario.FlatStyle = FlatStyle.Flat;
-            btnInventario.ForeColor = Color.White;
-            btnInventario.Location = new Point(32, 8);
-            btnInventario.Name = "btnInventario";
-            btnInventario.Size = new Size(168, 28);
-            btnInventario.TabIndex = 17;
-            btnInventario.Text = "Inventario";
-            btnInventario.UseVisualStyleBackColor = true;
-            btnInventario.Click += button7_Click_1;
             // 
             // btnFacturacion
             // 
@@ -263,7 +256,7 @@
             btnFacturacion.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 80, 200);
             btnFacturacion.FlatStyle = FlatStyle.Flat;
             btnFacturacion.ForeColor = Color.White;
-            btnFacturacion.Location = new Point(32, 42);
+            btnFacturacion.Location = new Point(35, 3);
             btnFacturacion.Name = "btnFacturacion";
             btnFacturacion.Size = new Size(168, 28);
             btnFacturacion.TabIndex = 15;
@@ -512,13 +505,12 @@
         private Button btnAgenda;
         private Panel panelSubVentas;
         private Panel panel5;
-        private Panel panel4;
         private Button button2;
         private Panel panelSubAdmin;
         private Panel panel6;
         private Panel panel7;
         private Button btnAparametros;
         private Button btnAusuarios;
-        private Button btnAdministracion;
+        private Button button3;
     }
 }
