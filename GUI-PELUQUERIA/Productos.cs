@@ -27,34 +27,15 @@ namespace GUI_PELUQUERIA
         {
             objent.numLote = txtnumLote.Text;
             objent.nombreP = txtNombre.Text;
-            int precio;
-            if (int.TryParse(txtPrecio.Text, out precio))
-            {
-                objent.precio = precio.ToString();
-            }
-            else
-            {
-                // Manejo del error si el valor no es un número entero válido
-                MessageBox.Show("El valor ingresado en Precio no es válido. Por favor, ingrese un número entero válido.");
-            }
+            objent.precio = Convert.ToDecimal(txtPrecio.Text);
+            
             string fechaTexto = dtCaducidad.Value.ToString(); // Convertir a texto usando el formato predeterminado
             string fechaFormatoPersonalizado = dtCaducidad.Value.ToString("dd/MM/yyyy"); // Convertir a texto con formato personalizado
 
             objent.fechaCaducidad = fechaFormatoPersonalizado;
             string valorSeleccionado = cbTipo.SelectedItem.ToString();
             objent.tipo = valorSeleccionado;
-            int stock;
-
-           if (int.TryParse(txtStockMin.Text, out stock))
-            {
-                objent.stockMin = stock.ToString();
-            }
-            else
-            {
-                // Manejo del error si el valor no es un número entero válido
-                MessageBox.Show("El valor ingresado en Stock no es válido. Por favor, ingrese un número entero válido.");
-                return;
-            }
+            objent.stockMin=Convert.ToInt32(txtStockMin.Text);
             objent.action = action;
             String men = objneg.N_mantenimiento_producto(objent);
             MessageBox.Show(men, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -70,18 +51,7 @@ namespace GUI_PELUQUERIA
         {
               if (ValidarNombre() == false) { return; }
               if (ValidarPrecio() == false) { return; }
-              //creamos un objeto de tipo lista 
-            /*  ClsProductos miProducto = new ClsProductos();
-              miProducto.Nombre = txtNombre.Text;
-              miProducto.Precio = txtPrecio.Text;
-              miProducto.FechaCaducidad = dtCaducidad.Text;
-              miProducto.StockInicial = txtStockMin.Text;
-              miProducto.Tipo = Convert.ToString(cbTipo.SelectedItem);
-              miLista.Add(miProducto);
-              dgvProductos.DataSource = null;
-              dgvProductos.DataSource = miLista;
-              LimpiarControles();
-              txtNombre.Focus();*/
+
             if (txtnumLote.Text == "")
             {
                 if (MessageBox.Show("Desea registrar a" + txtNombre.Text + "?", "Message",
@@ -127,7 +97,7 @@ namespace GUI_PELUQUERIA
                 erpError.SetError(txtPrecio, "Debe ingresar un precio");
                 return false;
             }
-            else
+            else 
             {
                 erpError.SetError(txtPrecio, "");
                 return true;

@@ -11,11 +11,11 @@ namespace Capa_Datos
 {
     public class ClaseDatos
     {
-        SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
+        SqlConnection pd = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
 
         public DataTable D_listar_productos()
         {
-            SqlCommand cmd = new SqlCommand("sp_listar_productos", cn);
+            SqlCommand cmd = new SqlCommand("sp_listar_productos", pd);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -23,7 +23,7 @@ namespace Capa_Datos
         }
         public DataTable D_buscar_productos(ClaseEntidad obje)
         {
-            SqlCommand cmd = new SqlCommand("sp_buscar_productos", cn);
+            SqlCommand cmd = new SqlCommand("sp_buscar_productos", pd);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@nombre", obje.nombreP);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -34,7 +34,7 @@ namespace Capa_Datos
         public String D_mantenimiento_productos(ClaseEntidad obje)
         {
             String action = "";
-            SqlCommand cmd = new SqlCommand("sp_mantenimiento_productos", cn);
+            SqlCommand cmd = new SqlCommand("sp_mantenimiento_productos", pd);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@numlote", obje.numLote);
             cmd.Parameters.AddWithValue("@nombre", obje.nombreP);
@@ -45,11 +45,11 @@ namespace Capa_Datos
           
             cmd.Parameters.Add("@action", SqlDbType.VarChar, 50).Value = obje.action;
             cmd.Parameters["@action"].Direction = ParameterDirection.InputOutput;
-            if (cn.State == ConnectionState.Open) cn.Close();
-            cn.Open();
+            if (pd.State == ConnectionState.Open) pd.Close();
+            pd.Open();
             cmd.ExecuteNonQuery();
             action = cmd.Parameters["@action"].Value.ToString();
-            cn.Close();
+            pd.Close();
             return action;
 
         }

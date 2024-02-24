@@ -37,6 +37,7 @@
             label3 = new Label();
             label5 = new Label();
             label1 = new Label();
+            button2 = new Button();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
@@ -126,17 +127,27 @@
             label1.TabIndex = 11;
             label1.Text = "Stock";
             // 
-            // StiockAgregar
+            // button2
+            // 
+            button2.Location = new Point(504, 127);
+            button2.Name = "button2";
+            button2.Size = new Size(91, 30);
+            button2.TabIndex = 16;
+            button2.Text = "Agregar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // StockAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(621, 276);
+            Controls.Add(button2);
             Controls.Add(groupBox2);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
             Controls.Add(label5);
             Controls.Add(label1);
-            Name = "StiockAgregar";
+            Name = "StockAgregar";
             Text = "StiockAgregar";
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
@@ -158,5 +169,6 @@
         private Label label3;
         private Label label5;
         private Label label1;
+        private Button button2;
     }
 }

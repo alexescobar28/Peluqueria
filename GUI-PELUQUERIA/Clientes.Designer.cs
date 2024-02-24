@@ -54,6 +54,7 @@
             cbEstadoCivil = new ComboBox();
             cbSexo = new ComboBox();
             groupBox1 = new GroupBox();
+            comboBox1 = new ComboBox();
             btnEliminar = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -64,7 +65,6 @@
             textBox1 = new TextBox();
             label15 = new Label();
             dataGridView1 = new DataGridView();
-            comboBox1 = new ComboBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             groupBox2.SuspendLayout();
@@ -296,6 +296,17 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Opciones";
             // 
+            // comboBox1
+            // 
+            comboBox1.Enabled = false;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Activo ", "Inactivo" });
+            comboBox1.Location = new Point(348, 36);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 9;
+            comboBox1.Text = "Activo";
+            // 
             // btnEliminar
             // 
             btnEliminar.ForeColor = Color.Black;
@@ -383,17 +394,6 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(737, 88);
             dataGridView1.TabIndex = 32;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Enabled = false;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Activo ", "Inactivo" });
-            comboBox1.Location = new Point(348, 36);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 9;
-            comboBox1.Text = "Activo";
             // 
             // Clientes
             // 

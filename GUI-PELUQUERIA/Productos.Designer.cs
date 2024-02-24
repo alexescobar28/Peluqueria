@@ -53,6 +53,8 @@
             label7 = new Label();
             label8 = new Label();
             txtnumLote = new TextBox();
+            label10 = new Label();
+            textBox1 = new TextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
@@ -140,9 +142,9 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(794, 79);
             label3.Name = "label3";
-            label3.Size = new Size(88, 15);
+            label3.Size = new Size(89, 15);
             label3.TabIndex = 5;
-            label3.Text = "Precio Unitario:";
+            label3.Text = "Precio Compra:";
             // 
             // label4
             // 
@@ -286,12 +288,30 @@
             txtnumLote.Size = new Size(62, 23);
             txtnumLote.TabIndex = 21;
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(794, 213);
+            label10.Name = "label10";
+            label10.Size = new Size(65, 15);
+            label10.TabIndex = 22;
+            label10.Text = "CANTIDAD";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(794, 247);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 23;
+            // 
             // Productos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(49, 66, 82);
             ClientSize = new Size(1386, 611);
+            Controls.Add(textBox1);
+            Controls.Add(label10);
             Controls.Add(txtnumLote);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -348,5 +368,7 @@
         private Label label7;
         private Label label9;
         private Button btnEliminar;
+        private TextBox textBox1;
+        private Label label10;
     }
 }

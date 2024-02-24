@@ -10,12 +10,12 @@ namespace Capa_Entidad
     public class ClaseEntidad
     {
         public string nombreP { get; set; }  
-        public string precio { get; set;}
+        public decimal precio { get; set;}
         public string numLote { get; set; }
         public string fechaCaducidad { get; set; }
         public string tipo { get; set; }
         public string action { get; set; }
-        public string stockMin {  get; set; }   
+        public int stockMin {  get; set; }   
 
 
     }
