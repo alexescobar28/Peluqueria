@@ -12,6 +12,7 @@ namespace GUI_PELUQUERIA
 {
     public partial class Herramientas : Form
     {
+        Conexion c=new Conexion();
         public Herramientas()
         {
             InitializeComponent();
@@ -63,7 +64,10 @@ namespace GUI_PELUQUERIA
         {
             if (ValidarNombre() == false) { return; }
             if (ValidarPrecio() == false) { return; }
-            else { MessageBox.Show("Herramienta Registrada"); }
+            else {
+                MessageBox.Show(txtNombre.Text+Convert.ToDouble(txtPrecio.Text)+ dtCaducidad.Value.ToString("dd/MM/yyyy") + Convert.ToString(cbEstado.SelectedItem)+txtMarca.Text);
+                MessageBox.Show(c.insertarH(txtNombre.Text,Convert.ToDouble(txtPrecio.Text),dtCaducidad.Value.ToString("dd/MM/yyyy"),Convert.ToString(cbEstado.SelectedItem),txtMarca.Text));
+            }
             LimpiarControles();
             txtNombre.Focus();
 
@@ -83,6 +87,11 @@ namespace GUI_PELUQUERIA
                 return;
             }
 
+        }
+
+        private void Herramientas_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

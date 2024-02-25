@@ -28,12 +28,147 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Usuarios";
+            dataGridView1 = new DataGridView();
+            groupBox1 = new GroupBox();
+            textUsuario = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            textContra = new TextBox();
+            btRegistrar = new Button();
+            btConsultar = new Button();
+            btActualizar = new Button();
+            btLimpiar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(86, 220);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(618, 218);
+            dataGridView1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btLimpiar);
+            groupBox1.Controls.Add(btActualizar);
+            groupBox1.Controls.Add(btConsultar);
+            groupBox1.Controls.Add(btRegistrar);
+            groupBox1.Controls.Add(textContra);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(textUsuario);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(95, 18);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(609, 171);
+            groupBox1.TabIndex = 1;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Datos";
+            // 
+            // textUsuario
+            // 
+            textUsuario.Location = new Point(65, 29);
+            textUsuario.Name = "textUsuario";
+            textUsuario.Size = new Size(403, 23);
+            textUsuario.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(47, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Usuario";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 92);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Contraseña";
+            // 
+            // textContra
+            // 
+            textContra.Location = new Point(83, 89);
+            textContra.Name = "textContra";
+            textContra.Size = new Size(385, 23);
+            textContra.TabIndex = 3;
+            // 
+            // btRegistrar
+            // 
+            btRegistrar.ForeColor = Color.Black;
+            btRegistrar.Location = new Point(125, 130);
+            btRegistrar.Name = "btRegistrar";
+            btRegistrar.Size = new Size(66, 25);
+            btRegistrar.TabIndex = 4;
+            btRegistrar.Text = "Registrar";
+            btRegistrar.UseVisualStyleBackColor = true;
+            // 
+            // btConsultar
+            // 
+            btConsultar.ForeColor = Color.Black;
+            btConsultar.Location = new Point(494, 29);
+            btConsultar.Name = "btConsultar";
+            btConsultar.Size = new Size(78, 27);
+            btConsultar.TabIndex = 5;
+            btConsultar.Text = "Consultar";
+            btConsultar.UseVisualStyleBackColor = true;
+            // 
+            // btActualizar
+            // 
+            btActualizar.ForeColor = Color.Black;
+            btActualizar.Location = new Point(396, 128);
+            btActualizar.Name = "btActualizar";
+            btActualizar.Size = new Size(82, 27);
+            btActualizar.TabIndex = 6;
+            btActualizar.Text = "Actualizar";
+            btActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btLimpiar
+            // 
+            btLimpiar.ForeColor = Color.Black;
+            btLimpiar.Location = new Point(240, 130);
+            btLimpiar.Name = "btLimpiar";
+            btLimpiar.Size = new Size(83, 26);
+            btLimpiar.TabIndex = 7;
+            btLimpiar.Text = "Limpiar";
+            btLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // Usuarios
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(49, 66, 82);
+            ClientSize = new Size(800, 450);
+            Controls.Add(groupBox1);
+            Controls.Add(dataGridView1);
+            ForeColor = Color.FromArgb(49, 66, 82);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Usuarios";
+            Text = "Usuarios";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private GroupBox groupBox1;
+        private Label label1;
+        private TextBox textUsuario;
+        private TextBox textContra;
+        private Label label2;
+        private Button btActualizar;
+        private Button btConsultar;
+        private Button btRegistrar;
+        private Button btLimpiar;
     }
 }

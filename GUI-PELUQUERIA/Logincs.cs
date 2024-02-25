@@ -13,8 +13,7 @@ namespace GUI_PELUQUERIA
     
     public partial class Login : Form
     {
-        static string conexionstring= "server = LAPTOP-MQ2NT5FG; database =Peluqueria; Integrated Security=True";
-        SqlConnection connection=new SqlConnection(conexionstring);
+        Conexion c=new Conexion();
         
         public Login()
         {
@@ -41,7 +40,7 @@ namespace GUI_PELUQUERIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text == "Usuario" && txtPassword.Text == "1234")
+            if (c.validarU(txtUser.Text,txtPassword.Text)>0)
             {
                 Form1 menu = new Form1();
                 this.Hide();

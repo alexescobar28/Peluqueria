@@ -242,6 +242,7 @@ namespace GUI_PELUQUERIA
         private void btnAusuarios_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            AbrirFormHija(new Usuarios());
         }
 
         private void btnAparametros_Click(object sender, EventArgs e)

@@ -11,7 +11,12 @@ namespace Capa_Datos
 {
     public class ClaseDatos
     {
-        SqlConnection pd = new SqlConnection(ConfigurationManager.ConnectionStrings["sql"].ConnectionString);
+        
+            
+        SqlConnection pd = new SqlConnection("Data Source=.;Initial Catalog=Peluqueria;Integrated Security=True;TrustServerCertificate=True");
+                              
+        
+        
 
         public DataTable D_listar_productos()
         {

@@ -213,6 +213,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Herramientas";
             Text = "Herramientas";
+            Load += Herramientas_Load;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)erpError).EndInit();
             ResumeLayout(false);
