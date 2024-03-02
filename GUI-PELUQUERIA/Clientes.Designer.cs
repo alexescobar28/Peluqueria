@@ -116,9 +116,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(838, 178);
             label5.Name = "label5";
-            label5.Size = new Size(105, 15);
+            label5.Size = new Size(41, 15);
             label5.TabIndex = 6;
-            label5.Text = "Correo Electrónico";
+            label5.Text = "E-mail";
             // 
             // label6
             // 

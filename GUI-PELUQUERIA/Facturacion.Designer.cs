@@ -160,7 +160,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 6;
-            
             // 
             // button1
             // 
@@ -209,7 +208,7 @@
             button4.Name = "button4";
             button4.Size = new Size(101, 46);
             button4.TabIndex = 6;
-            button4.Text = "Consultar por rango de Fecha";
+            button4.Text = "Consultar por Numero decedula";
             button4.UseVisualStyleBackColor = true;
             // 
             // groupBox3

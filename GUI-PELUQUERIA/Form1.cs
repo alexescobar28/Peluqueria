@@ -248,6 +248,7 @@ namespace GUI_PELUQUERIA
         private void btnAparametros_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            AbrirFormHija(new Parametros());
         }
     }
 }

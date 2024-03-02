@@ -291,6 +291,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.ForeColor = SystemColors.ButtonHighlight;
             label10.Location = new Point(794, 213);
             label10.Name = "label10";
             label10.Size = new Size(65, 15);

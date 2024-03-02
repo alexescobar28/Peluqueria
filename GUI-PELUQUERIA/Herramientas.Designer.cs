@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dtCaducidad = new DateTimePicker();
             txtPrecio = new TextBox();
             txtNombre = new TextBox();
@@ -41,12 +44,15 @@
             label6 = new Label();
             txtMarca = new TextBox();
             groupBox1 = new GroupBox();
+            button1 = new Button();
             button3 = new Button();
-            button2 = new Button();
             btnRegistrar = new Button();
+            button2 = new Button();
             erpError = new ErrorProvider(components);
+            dataGridView1 = new DataGridView();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)erpError).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dtCaducidad
@@ -126,6 +132,7 @@
             cbEstado.Size = new Size(185, 23);
             cbEstado.TabIndex = 28;
             cbEstado.Text = "Buen Estado";
+            cbEstado.SelectedIndexChanged += cbEstado_SelectedIndexChanged;
             // 
             // label6
             // 
@@ -145,8 +152,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(button3);
-            groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(btnRegistrar);
             groupBox1.Location = new Point(416, 284);
             groupBox1.Name = "groupBox1";
@@ -154,6 +161,17 @@
             groupBox1.TabIndex = 31;
             groupBox1.TabStop = false;
             groupBox1.Text = "Opciones";
+            // 
+            // button1
+            // 
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(178, 35);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 5;
+            button1.Text = "Limpiar";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
@@ -164,17 +182,7 @@
             button3.TabIndex = 3;
             button3.Text = "Actualizar";
             button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(185, 35);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 2;
-            button2.Text = "Consultar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button3.Click += button3_Click;
             // 
             // btnRegistrar
             // 
@@ -187,17 +195,59 @@
             btnRegistrar.UseVisualStyleBackColor = true;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
+            // button2
+            // 
+            button2.ForeColor = Color.Black;
+            button2.Location = new Point(323, 96);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 2;
+            button2.Text = "Consultar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // erpError
             // 
             erpError.ContainerControl = this;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.Location = new Point(273, 390);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.Size = new Size(650, 166);
+            dataGridView1.TabIndex = 32;
             // 
             // Herramientas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(49, 66, 82);
-            ClientSize = new Size(935, 471);
+            ClientSize = new Size(935, 600);
+            Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
+            Controls.Add(button2);
             Controls.Add(txtMarca);
             Controls.Add(label6);
             Controls.Add(cbEstado);
@@ -216,6 +266,7 @@
             Load += Herramientas_Load;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)erpError).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -238,5 +289,7 @@
         private Button button2;
         private Button btnRegistrar;
         private ErrorProvider erpError;
+        private Button button1;
+        private DataGridView dataGridView1;
     }
 }

@@ -67,7 +67,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = SystemColors.ActiveCaptionText;
-            label5.Location = new Point(325, 135);
+            label5.Location = new Point(325, 156);
             label5.Name = "label5";
             label5.Size = new Size(0, 32);
             label5.TabIndex = 5;
@@ -84,7 +84,8 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label3);
-            groupBox1.Location = new Point(325, 70);
+            groupBox1.ForeColor = Color.White;
+            groupBox1.Location = new Point(325, 91);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(461, 75);
             groupBox1.TabIndex = 8;
@@ -93,6 +94,7 @@
             // 
             // button1
             // 
+            button1.ForeColor = Color.Black;
             button1.Location = new Point(367, 27);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
@@ -104,7 +106,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(397, 182);
+            dataGridView1.Location = new Point(397, 203);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(543, 199);
             dataGridView1.TabIndex = 9;
@@ -112,7 +114,8 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(textBox2);
-            groupBox2.Location = new Point(826, 70);
+            groupBox2.ForeColor = Color.White;
+            groupBox2.Location = new Point(826, 91);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(182, 79);
             groupBox2.TabIndex = 10;

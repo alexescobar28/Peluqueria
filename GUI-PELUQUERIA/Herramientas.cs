@@ -12,7 +12,7 @@ namespace GUI_PELUQUERIA
 {
     public partial class Herramientas : Form
     {
-        Conexion c=new Conexion();
+        Conexion c = new Conexion();
         public Herramientas()
         {
             InitializeComponent();
@@ -50,7 +50,30 @@ namespace GUI_PELUQUERIA
             }
             else
             {
-                erpError.SetError(txtPrecio, "");
+
+                if (double.TryParse(txtPrecio.Text, out double aux))
+                {
+                    erpError.SetError(txtPrecio, "");
+                    return true;
+                }
+                else
+                {
+                    erpError.SetError(txtPrecio, "Debe ingresar un precio valido");
+                    return false;
+                }
+
+            }
+        }
+        private bool ValidarMarca()
+        {
+            if (string.IsNullOrEmpty(txtMarca.Text))
+            {
+                erpError.SetError(txtMarca, "Debe ingresar una marca");
+                return false;
+            }
+            else
+            {
+                erpError.SetError(txtMarca, "");
                 return true;
             }
         }
@@ -64,10 +87,18 @@ namespace GUI_PELUQUERIA
         {
             if (ValidarNombre() == false) { return; }
             if (ValidarPrecio() == false) { return; }
-            else {
-                MessageBox.Show(txtNombre.Text+Convert.ToDouble(txtPrecio.Text)+ dtCaducidad.Value.ToString("dd/MM/yyyy") + Convert.ToString(cbEstado.SelectedItem)+txtMarca.Text);
-                MessageBox.Show(c.insertarH(txtNombre.Text,Convert.ToDouble(txtPrecio.Text),dtCaducidad.Value.ToString("dd/MM/yyyy"),Convert.ToString(cbEstado.SelectedItem),txtMarca.Text));
+            if (ValidarMarca() == false) { return; }
+            if (c.validarH(txtNombre.Text) > 0)
+            {
+                MessageBox.Show("Herramienta ya registrada");
             }
+            else
+            {
+
+                MessageBox.Show(c.insertarH(txtNombre.Text, Convert.ToDouble(txtPrecio.Text), dtCaducidad.Value.ToString("dd/MM/yyyy"), Convert.ToString(cbEstado.SelectedItem), txtMarca.Text));
+                c.llenarT("herramientas", dataGridView1);
+            }
+
             LimpiarControles();
             txtNombre.Focus();
 
@@ -75,9 +106,14 @@ namespace GUI_PELUQUERIA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (ValidarNombre() == false)
+            if (c.validarH(txtNombre.Text) > 0)
             {
-                return;
+                c.llenarCH(txtNombre.Text, txtPrecio, dtCaducidad, cbEstado, txtMarca);
+                txtNombre.Enabled = false;
+                txtMarca.Enabled = false;
+                txtPrecio.Enabled = false;
+                dtCaducidad.Enabled = false;
+                button3.Show();
             }
             else
             {
@@ -91,7 +127,34 @@ namespace GUI_PELUQUERIA
 
         private void Herramientas_Load(object sender, EventArgs e)
         {
-           
+            button3.Hide();
+            c.llenarT("herramientas", dataGridView1);
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtMarca.Clear();
+            txtPrecio.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(c.actualizarH(txtNombre.Text,cbEstado.Text));
+            txtNombre.Clear();
+            txtMarca.Clear();
+            txtPrecio.Clear();
+            txtNombre.Enabled = true;
+            txtMarca.Enabled = true;
+            txtPrecio.Enabled = true;
+            dtCaducidad.Enabled = true;
+            c.llenarT("herramientas", dataGridView1);
+            button3.Hide();
         }
     }
 }
