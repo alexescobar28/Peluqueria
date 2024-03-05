@@ -188,7 +188,7 @@ namespace GUI_PELUQUERIA
 
         private void btnAdministracion_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new Administracion());
+            
         }
 
         private void btnVentas_Click_1(object sender, EventArgs e)
