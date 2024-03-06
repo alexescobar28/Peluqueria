@@ -12,6 +12,7 @@ namespace GUI_PELUQUERIA
 {
     public partial class Stock : Form
     {
+        Conexion c=new Conexion();
         public Stock()
         {
             InitializeComponent();
@@ -19,7 +20,14 @@ namespace GUI_PELUQUERIA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            if (c.validarP(textBox1.Text) > 0)
+            {
+                c.llenarPT(textBox1.Text, dataGridView1);
+            }
+            else
+            {
+                MessageBox.Show("No existe producto");
+            }
         }
     }
 }

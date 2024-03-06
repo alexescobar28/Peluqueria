@@ -28,14 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
             groupBox1 = new GroupBox();
             textBox1 = new TextBox();
             btnConsultar = new Button();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            txtCantidad = new TextBox();
+            label9 = new Label();
             dataGridView1 = new DataGridView();
-            textBox2 = new TextBox();
+            servicio = new DataGridViewTextBoxColumn();
+            cantidad = new DataGridViewTextBoxColumn();
+            costo = new DataGridViewTextBoxColumn();
+            txtPrecio = new TextBox();
             button2 = new Button();
             comboBox1 = new ComboBox();
             button1 = new Button();
@@ -49,6 +58,7 @@
             label6 = new Label();
             dateTimePicker1 = new DateTimePicker();
             groupBox4 = new GroupBox();
+            button6 = new Button();
             button5 = new Button();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
@@ -112,8 +122,10 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(txtCantidad);
+            groupBox2.Controls.Add(label9);
             groupBox2.Controls.Add(dataGridView1);
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(txtPrecio);
             groupBox2.Controls.Add(button2);
             groupBox2.Controls.Add(comboBox1);
             groupBox2.Controls.Add(button1);
@@ -127,20 +139,80 @@
             groupBox2.Text = "Detalle  de la Venta";
             groupBox2.Enter += groupBox2_Enter;
             // 
+            // txtCantidad
+            // 
+            txtCantidad.Location = new Point(253, 31);
+            txtCantidad.Name = "txtCantidad";
+            txtCantidad.Size = new Size(77, 23);
+            txtCantidad.TabIndex = 14;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(189, 34);
+            label9.Name = "label9";
+            label9.Size = new Size(58, 15);
+            label9.TabIndex = 13;
+            label9.Text = "Cantidad:";
+            // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 130);
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { servicio, cantidad, costo });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.ScrollBar;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.Location = new Point(31, 130);
             dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Size = new Size(407, 117);
             dataGridView1.TabIndex = 12;
             // 
-            // textBox2
+            // servicio
             // 
-            textBox2.Location = new Point(330, 36);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(121, 23);
-            textBox2.TabIndex = 11;
+            servicio.HeaderText = "Servicio";
+            servicio.Name = "servicio";
+            // 
+            // cantidad
+            // 
+            cantidad.HeaderText = "Cantidad";
+            cantidad.Name = "cantidad";
+            // 
+            // costo
+            // 
+            costo.HeaderText = "Costo";
+            costo.Name = "costo";
+            // 
+            // txtPrecio
+            // 
+            txtPrecio.Location = new Point(387, 31);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(64, 23);
+            txtPrecio.TabIndex = 11;
             // 
             // button2
             // 
@@ -151,12 +223,13 @@
             button2.TabIndex = 10;
             button2.Text = "Quitar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Corte", "Tinturado", "Peinado", "Venta de Producto" });
-            comboBox1.Location = new Point(89, 31);
+            comboBox1.Location = new Point(62, 31);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 6;
@@ -175,7 +248,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(31, 31);
+            label3.Location = new Point(23, 34);
             label3.Name = "label3";
             label3.Size = new Size(33, 15);
             label3.TabIndex = 5;
@@ -184,7 +257,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(284, 39);
+            label4.Location = new Point(336, 34);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 6;
@@ -256,6 +329,7 @@
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(button6);
             groupBox4.Controls.Add(button5);
             groupBox4.Controls.Add(textBox5);
             groupBox4.Controls.Add(textBox4);
@@ -268,15 +342,27 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Pago";
             // 
+            // button6
+            // 
+            button6.ForeColor = Color.Black;
+            button6.Location = new Point(36, 127);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 23);
+            button6.TabIndex = 17;
+            button6.Text = "Calcular";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
             // button5
             // 
             button5.ForeColor = Color.Black;
-            button5.Location = new Point(36, 150);
+            button5.Location = new Point(36, 173);
             button5.Name = "button5";
             button5.Size = new Size(75, 23);
             button5.TabIndex = 13;
             button5.Text = "Pagar";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // textBox5
             // 
@@ -331,6 +417,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "Facturacion";
             Text = "Facturacion";
+            Load += Facturacion_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -356,14 +443,13 @@
         private Label label4;
         private Button button2;
         private Button button1;
-        private TextBox textBox2;
+        private TextBox txtPrecio;
         private Button button3;
         private Button button4;
         private GroupBox groupBox3;
         private Label label5;
         private TextBox textBox3;
         private Label label6;
-        private DataGridView dataGridView1;
         private DateTimePicker dateTimePicker1;
         private GroupBox groupBox4;
         private Label label7;
@@ -371,5 +457,12 @@
         private TextBox textBox5;
         private TextBox textBox4;
         private Button button5;
+        private TextBox txtCantidad;
+        private Label label9;
+        private DataGridViewTextBoxColumn servicio;
+        private DataGridViewTextBoxColumn cantidad;
+        private DataGridViewTextBoxColumn costo;
+        public DataGridView dataGridView1;
+        private Button button6;
     }
 }

@@ -229,6 +229,23 @@ namespace GUI_PELUQUERIA
                 MessageBox.Show("No se pudo cargar los datos por: " + e.ToString());
             }
         }
+        public void llenarIVA(TextBox iva)
+        {
+            try
+            {
+                cmd = new SqlCommand("select * from parametros where nombre='IVA'", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    iva.Text = dr["valor"].ToString();
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudo cargar los datos por: " + e.ToString());
+            }
+        }
         public String actualizarP(String q,String v)
         {
             String salida = "Parametro actualizado";
@@ -242,6 +259,130 @@ namespace GUI_PELUQUERIA
                 salida = "No se pudo actualizar parametro por: "+e.ToString();
             }
             return salida;
+        }
+        public int validarP(String nom)
+        {
+            int contador = 0;
+            try
+            {
+                cmd = new SqlCommand("select * from productos where nombreP = '" + nom + "'", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    contador++;
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error de conexion con la base de datos");
+            }
+            return contador;
+        }
+        public int validarFID()
+        {
+            int contador = 0;
+            try
+            {
+                cmd = new SqlCommand("select * from factura", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    contador++;
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error de conexion con la base de datos");
+            }
+          
+            return contador;
+        }
+        public String insertarFac(String ced,String fec,String cos)
+        {
+            String salida = "Factura registrada";
+            try
+            {
+                cmd = new SqlCommand("insert into factura (cedula,fecha,costo)values ('" + ced + "','" + fec + "','"+cos+"')", cn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                salida = "No se registro factura debido a: " + e.ToString();
+            }
+            return salida;
+        }
+        public void insertIt(int idf,String nom,String can,String cost)
+        {
+            try
+            {
+                cmd = new SqlCommand("insert into item values ('"+idf+"','"+nom+"','"+can+"','"+cost+"')", cn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se registro item debido a: " + e.ToString());
+            }
+        }
+        public void llenarPT(String nom,DataGridView dgv)
+        {
+            String con = "select nombreP as 'Nombre de producto',sum(cantidad) as 'cantidad Total' from productos where nombreP='"+nom+"' group by nombreP";
+            try
+            {
+                da = new SqlDataAdapter(con, cn);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("No se pudo llenar la tabla por: " + e.ToString());
+            }
+        }
+        public void actINV(String nom,int cant)
+        {
+            try
+            {
+                cmd = new SqlCommand("delete from productos where cantidad=0", cn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("error eliminacion" + e.ToString());
+            }
+            try
+            {
+                cmd = new SqlCommand("select top 1 * from productos where nombreP='"+nom+"'", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    if (cant > int.Parse(dr["cantidad"].ToString()))
+                    {
+                        String aux = dr["numlote"].ToString();
+                        cant = cant - int.Parse(dr["cantidad"].ToString());
+                        dr.Close();
+                        cmd = new SqlCommand("update productos set cantidad=0 where numlote='"+aux+"'", cn);
+                        cmd.ExecuteNonQuery();
+                        actINV(nom, cant);
+                    }
+                    else
+                    {
+                        String aux = dr["numlote"].ToString();
+                        cant = int.Parse(dr["cantidad"].ToString())-cant;
+                        dr.Close();
+                        cmd = new SqlCommand("update productos set cantidad='"+cant+"' where numlote='" + aux + "'", cn);
+                        cmd.ExecuteNonQuery();
+                    }
+                    
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("error eliminacion" + e.ToString());
+            }
         }
     }
 }

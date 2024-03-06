@@ -38,9 +38,12 @@
             label5 = new Label();
             label1 = new Label();
             button2 = new Button();
+            groupBox3 = new GroupBox();
+            textBox3 = new TextBox();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox2
@@ -129,18 +132,38 @@
             // 
             // button2
             // 
-            button2.Location = new Point(504, 127);
+            button2.DialogResult = DialogResult.OK;
+            button2.Location = new Point(504, 209);
             button2.Name = "button2";
             button2.Size = new Size(91, 30);
             button2.TabIndex = 16;
             button2.Text = "Agregar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(textBox3);
+            groupBox3.Location = new Point(504, 114);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(105, 66);
+            groupBox3.TabIndex = 16;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Precio";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(17, 22);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(53, 23);
+            textBox3.TabIndex = 0;
             // 
             // StockAgregar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(621, 276);
+            Controls.Add(groupBox3);
             Controls.Add(button2);
             Controls.Add(groupBox2);
             Controls.Add(dataGridView1);
@@ -149,11 +172,14 @@
             Controls.Add(label1);
             Name = "StockAgregar";
             Text = "StiockAgregar";
+            Load += StockAgregar_Load;
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,14 +187,16 @@
         #endregion
 
         private GroupBox groupBox2;
-        private TextBox textBox2;
         private DataGridView dataGridView1;
         private GroupBox groupBox1;
         private Button button1;
-        private TextBox textBox1;
         private Label label3;
         private Label label5;
         private Label label1;
-        private Button button2;
+        public Button button2;
+        public TextBox textBox2;
+        public TextBox textBox1;
+        private GroupBox groupBox3;
+        public TextBox textBox3;
     }
 }
